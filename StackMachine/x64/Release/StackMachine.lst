@@ -1,0 +1,1583 @@
+Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/25/21 19:10:37
+StackMachine.asm					     Page 1 - 1
+
+
+
+ 00000000			.code
+
+ 00000000			VmEnter proc
+ 00000000  4D/ 89 21			mov [r9+0h],r12				;store used non volatile register
+ 00000003  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000007  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]	;jmp to first instruction handler
+ 0000000B			VmEnter endp
+
+ 0000000B			ViVmExit proc
+ 0000000B  4D/ 8B 21			mov r12,[r9+0h]
+ 0000000E  C3				ret
+ 0000000F			ViVmExit endp
+
+ 0000000F			ViNop proc
+ 0000000F  48/ 83 C2 01			add rdx,1h
+ 00000013  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000017  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000001B			ViNop endp
+
+ 0000001B			ViLdib proc
+ 0000001B  8A 42 01			mov al,byte ptr[rdx+1]
+ 0000001E  48/ 83 EC 01			sub rsp,1h
+ 00000022  88 04 24			mov byte ptr[rsp],al
+ 00000025  48/ 83 C2 02			add rdx,2h
+ 00000029  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000002D  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000031			ViLdib endp
+
+ 00000031			ViLdiw proc
+ 00000031  66| 8B 42 01			mov ax,word ptr[rdx+1]
+ 00000035  48/ 83 EC 02			sub rsp,2h
+ 00000039  66| 89 04 24			mov word ptr[rsp],ax
+ 0000003D  48/ 83 C2 03			add rdx,3h
+ 00000041  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000045  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000049			ViLdiw endp
+
+ 00000049			ViLdid proc
+ 00000049  8B 42 01			mov eax,dword ptr[rdx+1]
+ 0000004C  48/ 83 EC 04			sub rsp,4h
+ 00000050  89 04 24			mov dword ptr[rsp],eax
+ 00000053  48/ 83 C2 05			add rdx,5h
+ 00000057  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000005B  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000005F			ViLdid endp
+
+ 0000005F			ViLdiq proc
+ 0000005F  48/ 8B 42 01			mov rax,qword ptr[rdx+1]
+ 00000063  50				push rax
+ 00000064  48/ 83 C2 09			add rdx,9h
+ 00000068  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000006C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000070			ViLdiq endp
+
+ 00000070			ViLdibsxw proc
+ 00000070  66| 0F BE 42			movsx ax,byte ptr[rdx+1]
+	   01
+ 00000075  48/ 83 EC 02			sub rsp,2h
+ 00000079  66| 89 04 24			mov word ptr[rsp],ax
+ 0000007D  48/ 83 C2 02			add rdx,2h
+ 00000081  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000085  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000089			ViLdibsxw endp
+
+ 00000089			ViLdibsxd proc
+ 00000089  0F BE 42 01			movsx eax,byte ptr[rdx+1]
+ 0000008D  48/ 83 EC 04			sub rsp,4h
+ 00000091  89 04 24			mov dword ptr[rsp],eax
+ 00000094  48/ 83 C2 02			add rdx,2h
+ 00000098  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000009C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000000A0			ViLdibsxd endp
+
+ 000000A0			ViLdibsxq proc
+ 000000A0  48/ 0F BE 42			movsx rax,byte ptr[rdx+1]
+	   01
+ 000000A5  48/ 83 EC 08			sub rsp,8h
+ 000000A9  48/ 89 04 24			mov qword ptr[rsp],rax
+ 000000AD  48/ 83 C2 02			add rdx,2h
+ 000000B1  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000000B5  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000000B9			ViLdibsxq endp
+
+ 000000B9			ViLdiwsxd proc
+ 000000B9  0F BF 42 01			movsx eax,word ptr[rdx+1]
+ 000000BD  48/ 83 EC 04			sub rsp,4h
+ 000000C1  89 04 24			mov dword ptr[rsp],eax
+ 000000C4  48/ 83 C2 03			add rdx,3h
+ 000000C8  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000000CC  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000000D0			ViLdiwsxd endp
+
+ 000000D0			ViLdiwsxq proc
+ 000000D0  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 000000D5  48/ 83 EC 08			sub rsp,8h
+ 000000D9  48/ 89 04 24			mov qword ptr[rsp],rax
+ 000000DD  48/ 83 C2 03			add rdx,3h
+ 000000E1  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000000E5  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000000E9			ViLdiwsxq endp
+
+ 000000E9			ViLdidsxq proc
+ 000000E9  48/ 63 42 01			movsxd rax,dword ptr[rdx+1]
+ 000000ED  50				push rax
+ 000000EE  48/ 83 C2 05			add rdx,5h
+ 000000F2  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000000F6  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000000FA			ViLdidsxq endp
+
+ 000000FA			ViLdibzxw proc
+ 000000FA  66| 0F B6 42			movzx ax,byte ptr[rdx+1]
+	   01
+ 000000FF  48/ 83 EC 02			sub rsp,2h
+ 00000103  66| 89 04 24			mov word ptr[rsp],ax
+ 00000107  48/ 83 C2 02			add rdx,2h
+ 0000010B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000010F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000113			ViLdibzxw endp
+
+ 00000113			ViLdibzxd proc
+ 00000113  0F B6 42 01			movzx eax,byte ptr[rdx+1]
+ 00000117  48/ 83 EC 04			sub rsp,4h
+ 0000011B  89 04 24			mov dword ptr[rsp],eax
+ 0000011E  48/ 83 C2 02			add rdx,2h
+ 00000122  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000126  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000012A			ViLdibzxd endp
+
+ 0000012A			ViLdibzxq proc
+ 0000012A  48/ 0F B6 42			movzx rax,byte ptr[rdx+1]
+	   01
+ 0000012F  48/ 83 EC 08			sub rsp,8h
+ 00000133  48/ 89 04 24			mov qword ptr[rsp],rax
+ 00000137  48/ 83 C2 02			add rdx,2h
+ 0000013B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000013F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000143			ViLdibzxq endp
+
+ 00000143			ViLdiwzxd proc
+ 00000143  0F B7 42 01			movzx eax,word ptr[rdx+1]
+ 00000147  48/ 83 EC 04			sub rsp,4h
+ 0000014B  89 04 24			mov dword ptr[rsp],eax
+ 0000014E  48/ 83 C2 03			add rdx,3h
+ 00000152  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000156  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000015A			ViLdiwzxd endp
+
+ 0000015A			ViLdiwzxq proc
+ 0000015A  48/ 0F B7 42			movzx rax,word ptr[rdx+1]
+	   01
+ 0000015F  48/ 83 EC 08			sub rsp,8h
+ 00000163  48/ 89 04 24			mov qword ptr[rsp],rax
+ 00000167  48/ 83 C2 03			add rdx,3h
+ 0000016B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000016F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000173			ViLdiwzxq endp
+
+ 00000173			ViLdidzxq proc
+ 00000173  8B 42 01			mov eax,dword ptr[rdx+1]
+ 00000176  50				push rax
+ 00000177  48/ 83 C2 05			add rdx,5h
+ 0000017B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000017F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000183			ViLdidzxq endp
+
+ 00000183			ViLdab proc
+ 00000183  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 00000187  8A 00			mov al,byte ptr[rax]
+ 00000189  48/ 83 EC 01			sub rsp,1h
+ 0000018D  88 04 24			mov byte ptr[rsp],al
+ 00000190  48/ 83 C2 01			add rdx,1h
+ 00000194  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000198  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000019C			ViLdab endp
+
+ 0000019C			ViLdaw proc
+ 0000019C  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 000001A0  66| 8B 00			mov ax,word ptr[rax]
+ 000001A3  48/ 83 EC 02			sub rsp,2h
+ 000001A7  66| 89 04 24			mov word ptr[rsp],ax
+ 000001AB  48/ 83 C2 01			add rdx,1h
+ 000001AF  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000001B3  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000001B7			ViLdaw endp
+
+ 000001B7			ViLdad proc
+ 000001B7  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 000001BB  8B 00			mov eax,dword ptr[rax]
+ 000001BD  48/ 83 EC 04			sub rsp,4h
+ 000001C1  89 04 24			mov dword ptr[rsp],eax
+ 000001C4  48/ 83 C2 01			add rdx,1h
+ 000001C8  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000001CC  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000001D0			ViLdad endp
+
+ 000001D0			ViLdaq proc
+ 000001D0  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 000001D4  FF 30			push qword ptr[rax]
+ 000001D6  48/ 83 C2 01			add rdx,1h
+ 000001DA  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000001DE  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000001E2			ViLdaq endp
+
+ 000001E2			ViStab proc
+ 000001E2  8A 04 24			mov al,byte ptr[rsp]
+ 000001E5  48/ 83 C4 01			add rsp,1h
+ 000001E9  4C/ 8B 24 24			mov r12,qword ptr[rsp]
+ 000001ED  41/ 88 04 24			mov byte ptr[r12],al
+ 000001F1  48/ 83 C2 01			add rdx,1h
+ 000001F5  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000001F9  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000001FD			ViStab endp
+
+ 000001FD			ViStaw proc
+ 000001FD  66| 8B 04 24			mov ax,word ptr[rsp]
+ 00000201  48/ 83 C4 02			add rsp,2h
+ 00000205  4C/ 8B 24 24			mov r12,qword ptr[rsp]
+ 00000209  66| 41/ 89 04 24		mov word ptr[r12],ax
+ 0000020E  48/ 83 C2 01			add rdx,1h
+ 00000212  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000216  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000021A			ViStaw endp
+
+ 0000021A			ViStad proc
+ 0000021A  8B 04 24			mov eax,dword ptr[rsp]
+ 0000021D  48/ 83 C4 04			add rsp,4h
+ 00000221  4C/ 8B 24 24			mov r12,qword ptr[rsp]
+ 00000225  41/ 89 04 24			mov dword ptr[r12],eax
+ 00000229  48/ 83 C2 01			add rdx,1h
+ 0000022D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000231  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000235			ViStad endp
+
+ 00000235			ViStaq proc
+ 00000235  58	pop rax
+ 00000236  4C/ 8B 24 24			mov r12,qword ptr[rsp]
+ 0000023A  49/ 89 04 24			mov qword ptr[r12],rax
+ 0000023E  48/ 83 C2 01			add rdx,1h
+ 00000242  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000246  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000024A			ViStaq endp
+
+ 0000024A			ViSxbw proc
+ 0000024A  8A 04 24			mov al,byte ptr[rsp]
+ 0000024D  66| 0F BE C0			movsx ax,al
+ 00000251  48/ 83 EC 01			sub rsp,1h
+ 00000255  66| 89 04 24			mov word ptr[rsp],ax
+ 00000259  48/ 83 C2 01			add rdx,1h
+ 0000025D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000261  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000265			ViSxbw endp
+
+ 00000265			ViSxbd proc
+ 00000265  8A 04 24			mov al,byte ptr[rsp]
+ 00000268  0F BE C0			movsx eax,al
+ 0000026B  48/ 83 EC 03			sub rsp,3h
+ 0000026F  89 04 24			mov dword ptr[rsp],eax
+ 00000272  48/ 83 C2 01			add rdx,1h
+ 00000276  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000027A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000027E			ViSxbd endp
+
+ 0000027E			ViSxbq proc
+ 0000027E  8A 04 24			mov al,byte ptr[rsp]
+ 00000281  48/ 0F BE C0			movsx rax,al
+ 00000285  48/ 83 EC 07			sub rsp,7h
+ 00000289  48/ 89 04 24			mov qword ptr[rsp],rax
+ 0000028D  48/ 83 C2 01			add rdx,1h
+ 00000291  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000295  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000299			ViSxbq endp
+
+ 00000299			ViSxwd proc
+ 00000299  66| 8B 04 24			mov ax,word ptr[rsp]
+ 0000029D  0F BF C0			movsx eax,ax
+ 000002A0  48/ 83 EC 02			sub rsp,2h
+ 000002A4  89 04 24			mov dword ptr[rsp],eax
+ 000002A7  48/ 83 C2 01			add rdx,1h
+ 000002AB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000002AF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000002B3			ViSxwd endp
+
+ 000002B3			ViSxwq proc
+ 000002B3  66| 8B 04 24			mov ax,word ptr[rsp]
+ 000002B7  48/ 0F BF C0			movsx rax,ax
+ 000002BB  48/ 83 EC 06			sub rsp,6h
+ 000002BF  48/ 89 04 24			mov qword ptr[rsp],rax
+ 000002C3  48/ 83 C2 01			add rdx,1h
+ 000002C7  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000002CB  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000002CF			ViSxwq endp
+
+ 000002CF			ViSxdq proc
+ 000002CF  8B 04 24			mov eax,dword ptr[rsp]
+ 000002D2  48/ 63 C0			movsxd rax,eax
+ 000002D5  48/ 83 EC 04			sub rsp,4h
+ 000002D9  48/ 89 04 24			mov qword ptr[rsp],rax
+ 000002DD  48/ 83 C2 01			add rdx,1h
+ 000002E1  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000002E5  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000002E9			ViSxdq endp
+
+ 000002E9			ViZxbw proc
+ 000002E9  8A 04 24			mov al,byte ptr[rsp]
+ 000002EC  66| 0F B6 C0			movzx ax,al
+ 000002F0  48/ 83 EC 01			sub rsp,1h
+ 000002F4  66| 89 04 24			mov word ptr[rsp],ax
+ 000002F8  48/ 83 C2 01			add rdx,1h
+ 000002FC  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000300  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000304			ViZxbw endp
+
+ 00000304			ViZxbd proc
+ 00000304  8A 04 24			mov al,byte ptr[rsp]
+ 00000307  0F B6 C0			movzx eax,al
+ 0000030A  48/ 83 EC 03			sub rsp,3h
+ 0000030E  89 04 24			mov dword ptr[rsp],eax
+ 00000311  48/ 83 C2 01			add rdx,1h
+ 00000315  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000319  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000031D			ViZxbd endp
+
+ 0000031D			ViZxbq proc
+ 0000031D  8A 04 24			mov al,byte ptr[rsp]
+ 00000320  48/ 0F B6 C0			movzx rax,al
+ 00000324  48/ 83 EC 07			sub rsp,7h
+ 00000328  48/ 89 04 24			mov qword ptr[rsp],rax
+ 0000032C  48/ 83 C2 01			add rdx,1h
+ 00000330  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000334  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000338			ViZxbq endp
+
+ 00000338			ViZxwd proc
+ 00000338  66| 8B 04 24			mov ax,word ptr[rsp]
+ 0000033C  0F B7 C0			movzx eax,ax
+ 0000033F  48/ 83 EC 02			sub rsp,2h
+ 00000343  89 04 24			mov dword ptr[rsp],eax
+ 00000346  48/ 83 C2 01			add rdx,1h
+ 0000034A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000034E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000352			ViZxwd endp
+
+ 00000352			ViZxwq proc
+ 00000352  66| 8B 04 24			mov ax,word ptr[rsp]
+ 00000356  48/ 0F B7 C0			movzx rax,ax
+ 0000035A  48/ 83 EC 06			sub rsp,6h
+ 0000035E  48/ 89 04 24			mov qword ptr[rsp],rax
+ 00000362  48/ 83 C2 01			add rdx,1h
+ 00000366  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000036A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000036E			ViZxwq endp
+
+ 0000036E			ViZxdq proc
+ 0000036E  8B 04 24			mov eax,dword ptr[rsp]
+ 00000371  48/ 83 EC 04			sub rsp,4h
+ 00000375  48/ 89 04 24			mov qword ptr[rsp],rax
+ 00000379  48/ 83 C2 01			add rdx,1h
+ 0000037D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000381  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000385			ViZxdq endp
+
+ 00000385			ViPushb proc
+ 00000385  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]		;zero extend regid
+	   01
+ 0000038A  8A 04 C1			mov al,byte ptr[rcx+rax*8h]		;load btye from register
+ 0000038D  48/ 83 EC 01			sub rsp,1h
+ 00000391  88 04 24			mov byte ptr[rsp],al
+ 00000394  48/ 83 C2 02			add rdx,2h
+ 00000398  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000039C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000003A0			ViPushb endp
+
+ 000003A0			ViPushw proc
+ 000003A0  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000003A5  66| 8B 04 C1			mov ax,word ptr[rcx+rax*8h]
+ 000003A9  48/ 83 EC 02			sub rsp,2h
+ 000003AD  66| 89 04 24			mov word ptr[rsp],ax
+ 000003B1  48/ 83 C2 02			add rdx,2h
+ 000003B5  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000003B9  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000003BD			ViPushw endp
+
+ 000003BD			ViPushd proc
+ 000003BD  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000003C2  8B 04 C1			mov eax,dword ptr[rcx+rax*8h]
+ 000003C5  48/ 83 EC 04			sub rsp,4h
+ 000003C9  89 04 24			mov dword ptr[rsp],eax
+ 000003CC  48/ 83 C2 02			add rdx,2h
+ 000003D0  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000003D4  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000003D8			ViPushd endp
+
+ 000003D8			ViPushq proc
+ 000003D8  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000003DD  FF 34 C1			push qword ptr[rcx+rax*8h]
+ 000003E0  48/ 83 C2 02			add rdx,2h
+ 000003E4  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000003E8  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000003EC			ViPushq endp
+
+ 000003EC			ViPopb proc
+ 000003EC  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000003F1  44/ 8A 24 24			mov r12b,byte ptr[rsp]
+ 000003F5  48/ 83 C4 01			add rsp,1h
+ 000003F9  44/ 88 24 C1			mov byte ptr[rcx+rax*8h],r12b
+ 000003FD  48/ 83 C2 02			add rdx,2h
+ 00000401  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000405  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000409			ViPopb endp
+
+ 00000409			ViPopw proc
+ 00000409  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 0000040E  66| 44/ 8B 24 24		mov r12w,word ptr[rsp]
+ 00000413  48/ 83 C4 02			add rsp,2h
+ 00000417  66| 44/ 89 24 C1		mov word ptr[rcx+rax*8h],r12w
+ 0000041C  48/ 83 C2 02			add rdx,2h
+ 00000420  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000424  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000428			ViPopw endp
+
+ 00000428			ViPopd proc
+ 00000428  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 0000042D  44/ 8B 24 24			mov r12d,dword ptr[rsp]
+ 00000431  48/ 83 C4 04			add rsp,4h
+ 00000435  44/ 89 24 C1			mov dword ptr[rcx+rax*8h],r12d
+ 00000439  48/ 83 C2 02			add rdx,2h
+ 0000043D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000441  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000445			ViPopd endp
+
+ 00000445			ViPopq proc
+ 00000445  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 0000044A  41/ 5C			pop r12
+ 0000044C  4C/ 89 24 C1			mov qword ptr[rcx+rax*8h],r12
+ 00000450  48/ 83 C2 02			add rdx,2h
+ 00000454  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000458  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000045C			ViPopq endp
+
+ 0000045C			ViNpopb proc
+ 0000045C  48/ 83 C4 01			add rsp,1
+ 00000460  48/ 83 C2 01			add rdx,1h
+ 00000464  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000468  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000046C			ViNpopb endp
+
+ 0000046C			ViNpopw proc
+ 0000046C  48/ 83 C4 02			add rsp,2
+ 00000470  48/ 83 C2 01			add rdx,1h
+ 00000474  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000478  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000047C			ViNpopw endp
+
+ 0000047C			ViNpopd proc
+ 0000047C  48/ 83 C4 04			add rsp,4
+ 00000480  48/ 83 C2 01			add rdx,1h
+ 00000484  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000488  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000048C			ViNpopd endp
+
+ 0000048C			ViNpopq proc
+ 0000048C  48/ 83 C4 08			add rsp,8
+ 00000490  48/ 83 C2 01			add rdx,1h
+ 00000494  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000498  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000049C			ViNpopq endp
+
+ 0000049C			ViAddb proc
+ 0000049C  8A 04 24			mov al,byte ptr[rsp]
+ 0000049F  48/ 83 C4 01			add rsp,1h
+ 000004A3  00 04 24			add byte ptr[rsp],al
+ 000004A6  9C				pushfq
+ 000004A7  48/ 83 C2 01			add rdx,1h
+ 000004AB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000004AF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000004B3			ViAddb endp
+
+ 000004B3			ViAddw proc
+ 000004B3  66| 8B 04 24			mov ax,word ptr[rsp]
+ 000004B7  48/ 83 C4 02			add rsp,2h
+ 000004BB  66| 01 04 24			add word ptr[rsp],ax
+ 000004BF  9C				pushfq
+ 000004C0  48/ 83 C2 01			add rdx,1h
+ 000004C4  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000004C8  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000004CC			ViAddw endp
+
+ 000004CC			ViAddd proc
+ 000004CC  8B 04 24			mov eax,dword ptr[rsp]
+ 000004CF  48/ 83 C4 04			add rsp,4h
+ 000004D3  01 04 24			add dword ptr[rsp],eax
+ 000004D6  9C				pushfq
+ 000004D7  48/ 83 C2 01			add rdx,1h
+ 000004DB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000004DF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000004E3			ViAddd endp
+
+ 000004E3			ViAddq proc
+ 000004E3  58				pop rax
+ 000004E4  48/ 01 04 24			add qword ptr[rsp],rax
+ 000004E8  9C				pushfq
+ 000004E9  48/ 83 C2 01			add rdx,1h
+ 000004ED  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000004F1  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000004F5			ViAddq endp
+
+ 000004F5			ViSubb proc
+ 000004F5  8A 04 24			mov al,byte ptr[rsp]
+ 000004F8  48/ 83 C4 01			add rsp,1h
+ 000004FC  28 04 24			sub byte ptr[rsp],al
+ 000004FF  9C				pushfq
+ 00000500  48/ 83 C2 01			add rdx,1h
+ 00000504  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000508  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000050C			ViSubb endp
+
+ 0000050C			ViSubw proc
+ 0000050C  66| 8B 04 24			mov ax,word ptr[rsp]
+ 00000510  48/ 83 C4 02			add rsp,2h
+ 00000514  66| 29 04 24			sub word ptr[rsp],ax
+ 00000518  9C				pushfq
+ 00000519  48/ 83 C2 01			add rdx,1h
+ 0000051D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000521  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000525			ViSubw endp
+
+ 00000525			ViSubd proc
+ 00000525  8B 04 24			mov eax,dword ptr[rsp]
+ 00000528  48/ 83 C4 04			add rsp,4h
+ 0000052C  29 04 24			sub dword ptr[rsp],eax
+ 0000052F  9C				pushfq
+ 00000530  48/ 83 C2 01			add rdx,1h
+ 00000534  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000538  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000053C			ViSubd endp
+
+ 0000053C			ViSubq proc
+ 0000053C  58				pop rax
+ 0000053D  48/ 29 04 24			sub qword ptr[rsp],rax
+ 00000541  9C				pushfq
+ 00000542  48/ 83 C2 01			add rdx,1h
+ 00000546  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000054A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000054E			ViSubq endp
+
+ 0000054E			ViMulb proc
+ 0000054E  8A 04 24			mov al,[rsp]
+ 00000551  F6 64 24 01			mul byte ptr[rsp+1h]
+ 00000555  66| 89 04 24			mov [rsp],ax
+ 00000559  9C				pushfq
+ 0000055A  48/ 83 C2 01			add rdx,1h
+ 0000055E  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000562  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000566			ViMulb endp
+
+ 00000566			ViMulw proc
+ 00000566  66| 8B 04 24			mov ax,[rsp]
+ 0000056A  66| F7 64 24			mul word ptr[rsp+2h]
+	   02
+ 0000056F  66| 89 44 24			mov [rsp+2h],ax
+	   02
+ 00000574  66| 89 14 24			mov [rsp],dx
+ 00000578  9C				pushfq
+ 00000579  48/ 83 C2 01			add rdx,1h
+ 0000057D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000581  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000585			ViMulw endp
+
+ 00000585			ViMuld proc
+ 00000585  8B 04 24			mov eax,[rsp]
+ 00000588  F7 64 24 04			mul dword ptr[rsp+4h]
+ 0000058C  89 44 24 04			mov [rsp+4h],eax
+ 00000590  89 14 24			mov [rsp],edx
+ 00000593  9C				pushfq
+ 00000594  48/ 83 C2 01			add rdx,1h
+ 00000598  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000059C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000005A0			ViMuld endp
+
+ 000005A0			ViMulq proc
+ 000005A0  48/ 8B 04 24			mov rax,[rsp]
+ 000005A4  48/ F7 64 24			mul qword ptr[rsp+8h]
+	   08
+ 000005A9  48/ 89 44 24			mov [rsp+8h],rax
+	   08
+ 000005AE  48/ 89 14 24			mov [rsp],rdx
+ 000005B2  9C				pushfq
+ 000005B3  48/ 83 C2 01			add rdx,1h
+ 000005B7  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000005BB  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000005BF			ViMulq endp
+
+ 000005BF			ViDivb proc
+ 000005BF  66| 8B 44 24			mov ax,[rsp+1h]
+	   01
+ 000005C4  F6 34 24			div byte ptr[rsp]
+ 000005C7  48/ 83 C4 01			add rsp,1h
+ 000005CB  88 44 24 01			mov [rsp+1h],al
+ 000005CF  88 24 24			mov [rsp],ah
+ 000005D2  9C				pushfq
+ 000005D3  48/ 83 C2 01			add rdx,1h
+ 000005D7  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000005DB  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000005DF			ViDivb endp
+
+ 000005DF			ViDivw proc
+ 000005DF  66| 8B 44 24			mov ax,[rsp+4h]
+	   04
+ 000005E4  66| 8B 54 24			mov dx,[rsp+2h]
+	   02
+ 000005E9  66| F7 34 24			div word ptr[rsp]
+ 000005ED  48/ 83 C4 02			add rsp,2h
+ 000005F1  66| 89 44 24			mov [rsp+2h],ax
+	   02
+ 000005F6  66| 89 14 24			mov [rsp],dx
+ 000005FA  9C				pushfq
+ 000005FB  48/ 83 C2 01			add rdx,1h
+ 000005FF  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000603  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000607			ViDivw endp
+
+ 00000607			ViDivd proc
+ 00000607  8B 44 24 08			mov eax,[rsp+8h]
+ 0000060B  8B 54 24 04			mov edx,[rsp+4h]
+ 0000060F  F7 34 24			div dword ptr[rsp]
+ 00000612  48/ 83 C4 04			add rsp,4h
+ 00000616  89 44 24 04			mov [rsp+4h],eax
+ 0000061A  89 14 24			mov [rsp],edx
+ 0000061D  9C				pushfq
+ 0000061E  48/ 83 C2 01			add rdx,1h
+ 00000622  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000626  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000062A			ViDivd endp
+
+ 0000062A			ViDivq proc
+ 0000062A  48/ 8B 44 24			mov rax,[rsp+10h]
+	   10
+ 0000062F  48/ 8B 54 24			mov rdx,[rsp+8h]
+	   08
+ 00000634  48/ F7 34 24			div qword ptr[rsp]
+ 00000638  48/ 83 C4 08			add rsp,8h
+ 0000063C  48/ 89 44 24			mov [rsp+8h],rax
+	   08
+ 00000641  48/ 89 14 24			mov [rsp],rdx
+ 00000645  9C				pushfq
+ 00000646  48/ 83 C2 01			add rdx,1h
+ 0000064A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000064E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000652			ViDivq endp
+
+ 00000652			ViAndb proc
+ 00000652  8A 04 24			mov al,byte ptr[rsp]
+ 00000655  48/ 83 C4 01			add rsp,1h
+ 00000659  20 04 24			and byte ptr[rsp],al
+ 0000065C  9C				pushfq
+ 0000065D  48/ 83 C2 01			add rdx,1h
+ 00000661  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000665  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000669			ViAndb endp
+
+ 00000669			ViAndw proc
+ 00000669  66| 8B 04 24			mov ax,word ptr[rsp]
+ 0000066D  48/ 83 C4 02			add rsp,2h
+ 00000671  66| 21 04 24			and word ptr[rsp],ax
+ 00000675  9C				pushfq
+ 00000676  48/ 83 C2 01			add rdx,1h
+ 0000067A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000067E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000682			ViAndw endp
+
+ 00000682			ViAndd proc
+ 00000682  8B 04 24			mov eax,dword ptr[rsp]
+ 00000685  48/ 83 C4 04			add rsp,4h
+ 00000689  21 04 24			and dword ptr[rsp],eax
+ 0000068C  9C				pushfq
+ 0000068D  48/ 83 C2 01			add rdx,1h
+ 00000691  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000695  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000699			ViAndd endp
+
+ 00000699			ViAndq proc
+ 00000699  58				pop rax
+ 0000069A  48/ 21 04 24			and qword ptr[rsp],rax
+ 0000069E  9C				pushfq
+ 0000069F  48/ 83 C2 01			add rdx,1h
+ 000006A3  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000006A7  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000006AB			ViAndq endp
+
+ 000006AB			ViOrb proc
+ 000006AB  8A 04 24			mov al,byte ptr[rsp]
+ 000006AE  48/ 83 C4 01			add rsp,1h
+ 000006B2  08 04 24			or byte ptr[rsp],al
+ 000006B5  9C				pushfq
+ 000006B6  48/ 83 C2 01			add rdx,1h
+ 000006BA  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000006BE  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000006C2			ViOrb endp
+
+ 000006C2			ViOrw proc
+ 000006C2  66| 8B 04 24			mov ax,word ptr[rsp]
+ 000006C6  48/ 83 C4 02			add rsp,2h
+ 000006CA  66| 09 04 24			or word ptr[rsp],ax
+ 000006CE  9C				pushfq
+ 000006CF  48/ 83 C2 01			add rdx,1h
+ 000006D3  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000006D7  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000006DB			ViOrw endp
+
+ 000006DB			ViOrd proc
+ 000006DB  8B 04 24			mov eax,dword ptr[rsp]
+ 000006DE  48/ 83 C4 04			add rsp,4h
+ 000006E2  09 04 24			or dword ptr[rsp],eax
+ 000006E5  9C				pushfq
+ 000006E6  48/ 83 C2 01			add rdx,1h
+ 000006EA  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000006EE  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000006F2			ViOrd endp
+
+ 000006F2			ViOrq proc
+ 000006F2  58				pop rax
+ 000006F3  48/ 09 04 24			or qword ptr[rsp],rax
+ 000006F7  9C				pushfq
+ 000006F8  48/ 83 C2 01			add rdx,1h
+ 000006FC  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000700  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000704			ViOrq endp
+
+ 00000704			ViXorb proc
+ 00000704  8A 04 24			mov al,byte ptr[rsp]
+ 00000707  48/ 83 C4 01			add rsp,1h
+ 0000070B  30 04 24			xor byte ptr[rsp],al
+ 0000070E  9C	pushfq
+ 0000070F  48/ 83 C2 01			add rdx,1h
+ 00000713  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000717  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000071B			ViXorb endp
+
+ 0000071B			ViXorw proc
+ 0000071B  66| 8B 04 24			mov ax,word ptr[rsp]
+ 0000071F  48/ 83 C4 02			add rsp,2h
+ 00000723  66| 31 04 24			xor word ptr[rsp],ax
+ 00000727  9C				pushfq
+ 00000728  48/ 83 C2 01			add rdx,1h
+ 0000072C  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000730  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000734			ViXorw endp
+
+ 00000734			ViXord proc
+ 00000734  8B 04 24			mov eax,dword ptr[rsp]
+ 00000737  48/ 83 C4 04			add rsp,4h
+ 0000073B  31 04 24			xor dword ptr[rsp],eax
+ 0000073E  9C				pushfq
+ 0000073F  48/ 83 C2 01			add rdx,1h
+ 00000743  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000747  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000074B			ViXord endp
+
+ 0000074B			ViXorq proc
+ 0000074B  58				pop rax
+ 0000074C  48/ 31 04 24			xor qword ptr[rsp],rax
+ 00000750  9C				pushfq
+ 00000751  48/ 83 C2 01			add rdx,1h
+ 00000755  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000759  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000075D			ViXorq endp
+
+ 0000075D			ViShlb proc
+ 0000075D  4C/ 8B E1			mov r12,rcx
+ 00000760  8A 0C 24			mov cl,byte ptr[rsp]	;load shift amout
+ 00000763  48/ 83 C4 01			add rsp,1h
+ 00000767  D2 24 24			shl byte ptr[rsp],cl
+ 0000076A  9C				pushfq
+ 0000076B  49/ 8B CC			mov rcx,r12
+ 0000076E  48/ 83 C2 01			add rdx,1h
+ 00000772  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000776  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000077A			ViShlb endp
+
+ 0000077A			ViShlw proc
+ 0000077A  4C/ 8B E1			mov r12,rcx
+ 0000077D  8A 0C 24			mov cl,byte ptr[rsp]
+ 00000780  48/ 83 C4 01			add rsp,1h
+ 00000784  66| D3 24 24			shl word ptr[rsp],cl
+ 00000788  9C				pushfq
+ 00000789  49/ 8B CC			mov rcx,r12
+ 0000078C  48/ 83 C2 01			add rdx,1h
+ 00000790  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000794  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000798			ViShlw endp
+
+ 00000798			ViShld proc
+ 00000798  4C/ 8B E1			mov r12,rcx
+ 0000079B  8A 0C 24			mov cl,byte ptr[rsp]
+ 0000079E  48/ 83 C4 01			add rsp,1h
+ 000007A2  D3 24 24			shl dword ptr[rsp],cl
+ 000007A5  9C				pushfq
+ 000007A6  49/ 8B CC			mov rcx,r12
+ 000007A9  48/ 83 C2 01			add rdx,1h
+ 000007AD  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000007B1  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000007B5			ViShld endp
+
+ 000007B5			ViShlq proc
+ 000007B5  4C/ 8B E1			mov r12,rcx
+ 000007B8  8A 0C 24			mov cl,byte ptr[rsp]
+ 000007BB  48/ 83 C4 01			add rsp,1h
+ 000007BF  48/ D3 24 24			shl qword ptr[rsp],cl
+ 000007C3  9C				pushfq
+ 000007C4  49/ 8B CC			mov rcx,r12
+ 000007C7  48/ 83 C2 01			add rdx,1h
+ 000007CB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000007CF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000007D3			ViShlq endp
+
+ 000007D3			ViShrb proc
+ 000007D3  4C/ 8B E1			mov r12,rcx
+ 000007D6  8A 0C 24			mov cl,byte ptr[rsp]	;load shift amout
+ 000007D9  48/ 83 C4 01			add rsp,1h
+ 000007DD  D2 2C 24			shr byte ptr[rsp],cl
+ 000007E0  9C				pushfq
+ 000007E1  49/ 8B CC			mov rcx,r12
+ 000007E4  48/ 83 C2 01			add rdx,1h
+ 000007E8  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000007EC  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000007F0			ViShrb endp
+
+ 000007F0			ViShrw proc
+ 000007F0  4C/ 8B E1			mov r12,rcx
+ 000007F3  8A 0C 24			mov cl,byte ptr[rsp]
+ 000007F6  48/ 83 C4 01			add rsp,1h
+ 000007FA  66| D3 2C 24			shr word ptr[rsp],cl
+ 000007FE  9C				pushfq
+ 000007FF  49/ 8B CC			mov rcx,r12
+ 00000802  48/ 83 C2 01			add rdx,1h
+ 00000806  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000080A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000080E			ViShrw endp
+
+ 0000080E			ViShrd proc
+ 0000080E  4C/ 8B E1			mov r12,rcx
+ 00000811  8A 0C 24			mov cl,byte ptr[rsp]
+ 00000814  48/ 83 C4 01			add rsp,1h
+ 00000818  D3 2C 24			shr dword ptr[rsp],cl
+ 0000081B  9C				pushfq
+ 0000081C  49/ 8B CC			mov rcx,r12
+ 0000081F  48/ 83 C2 01			add rdx,1h
+ 00000823  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000827  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000082B			ViShrd endp
+
+ 0000082B			ViShrq proc
+ 0000082B  4C/ 8B E1			mov r12,rcx
+ 0000082E  8A 0C 24			mov cl,byte ptr[rsp]
+ 00000831  48/ 83 C4 01			add rsp,1h
+ 00000835  48/ D3 2C 24			shr qword ptr[rsp],cl
+ 00000839  9C				pushfq
+ 0000083A  49/ 8B CC			mov rcx,r12
+ 0000083D  48/ 83 C2 01			add rdx,1h
+ 00000841  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000845  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000849			ViShrq endp
+
+ 00000849			ViCmpb proc
+ 00000849  8A 04 24			mov al,byte ptr[rsp]
+ 0000084C  38 44 24 01			cmp byte ptr[rsp+1],al
+ 00000850  9C				pushfq
+ 00000851  48/ 83 C2 01			add rdx,1h
+ 00000855  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000859  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000085D			ViCmpb endp
+
+ 0000085D			ViCmpw proc
+ 0000085D  66| 8B 04 24			mov ax,word ptr[rsp]
+ 00000861  66| 39 44 24			cmp word ptr[rsp+2],ax
+	   02
+ 00000866  9C				pushfq
+ 00000867  48/ 83 C2 01			add rdx,1h
+ 0000086B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000086F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000873			ViCmpw endp
+
+ 00000873			ViCmpd proc
+ 00000873  8B 04 24			mov eax,dword ptr[rsp]
+ 00000876  39 44 24 04			cmp dword ptr[rsp+4],eax
+ 0000087A  9C				pushfq
+ 0000087B  48/ 83 C2 01			add rdx,1h
+ 0000087F  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000883  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000887			ViCmpd endp
+
+ 00000887			ViCmpq proc
+ 00000887  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 0000088B  48/ 39 44 24			cmp qword ptr[rsp+8],rax
+	   08
+ 00000890  9C				pushfq
+ 00000891  48/ 83 C2 01			add rdx,1h
+ 00000895  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000899  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000089D			ViCmpq endp
+
+ 0000089D			ViJmp proc
+ 0000089D  58				pop rax
+ 0000089E  48/ 03 D0			add rdx,rax
+ 000008A1  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008A5  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008A9			ViJmp endp
+
+ 000008A9			ViJmpi proc
+ 000008A9  48/ 8B 42 01			mov rax,[rdx+1h]			;load 8 byte immediate jump offset
+ 000008AD  48/ 03 D0			add rdx,rax
+ 000008B0  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008B4  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008B8			ViJmpi endp
+
+ 000008B8			ViJl proc
+ 000008B8  9D				popfq					;pop rflags
+ 000008B9  7C 0C			jl DoJump
+ 000008BB  48/ 83 C2 09			add rdx,9h
+ 000008BF  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008C3  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008C7			DoJump:
+ 000008C7  48/ 8B 42 01			mov rax,[rdx+1h]		;load 8 byte immediate jump offset
+ 000008CB  48/ 03 D0			add rdx,rax
+ 000008CE  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008D2  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008D6			ViJl endp
+
+ 000008D6			ViJle proc
+ 000008D6  9D				popfq
+ 000008D7  7E 0C			jle DoJump
+ 000008D9  48/ 83 C2 09			add rdx,9h
+ 000008DD  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008E1  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008E5			DoJump:
+ 000008E5  48/ 8B 42 01			mov rax,[rdx+1h]
+ 000008E9  48/ 03 D0			add rdx,rax
+ 000008EC  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008F0  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000008F4			ViJle endp
+
+ 000008F4			ViJg proc
+ 000008F4  9D				popfq
+ 000008F5  7F 0C			jg DoJump
+ 000008F7  48/ 83 C2 09			add rdx,9h
+ 000008FB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000008FF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000903			DoJump:
+ 00000903  48/ 8B 42 01			mov rax,[rdx+1h]
+ 00000907  48/ 03 D0			add rdx,rax
+ 0000090A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000090E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000912			ViJg endp
+
+ 00000912			ViJge proc
+ 00000912  9D				popfq
+ 00000913  7D 0C			jge DoJump
+ 00000915  48/ 83 C2 09			add rdx,9h
+ 00000919  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000091D  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000921			DoJump:
+ 00000921  48/ 8B 42 01			mov rax,[rdx+1h]
+ 00000925  48/ 03 D0			add rdx,rax
+ 00000928  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000092C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000930			ViJge endp
+
+ 00000930			ViJz proc
+ 00000930  9D				popfq
+ 00000931  74 0C			jz DoJump
+ 00000933  48/ 83 C2 09			add rdx,9h
+ 00000937  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000093B  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000093F			DoJump:
+ 0000093F  48/ 8B 42 01			mov rax,[rdx+1h]
+ 00000943  48/ 03 D0			add rdx,rax
+ 00000946  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000094A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000094E			ViJz endp
+
+ 0000094E			ViJnz proc
+ 0000094E  9D				popfq
+ 0000094F  75 0C			jnz DoJump
+ 00000951  48/ 83 C2 09			add rdx,9h
+ 00000955  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000959  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000095D			DoJump:
+ 0000095D  48/ 8B 42 01			mov rax,[rdx+1h]
+ 00000961  48/ 03 D0			add rdx,rax
+ 00000964  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000968  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000096C			ViJnz endp
+
+ 0000096C			ViCall proc
+ 0000096C  48/ 8B C2			mov rax,rdx
+ 0000096F  4C/ 8B 62 01			mov r12,[rdx+1h]			;load jump delta from instruction imm
+ 00000973  48/ 83 C0 09			add rax,9h
+ 00000977  50				push rax
+ 00000978  49/ 03 D4			add rdx,r12
+ 0000097B  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 0000097F  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000983			ViCall endp
+
+ 00000983			ViRet proc
+ 00000983  5A				pop rdx						;pop value from top of stack into vip
+ 00000984  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000988  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 0000098C			ViRet endp
+
+ 0000098C			ViX86Call proc
+ 0000098C  4D/ 8B E1			mov r12,r9				;preserve r9(storage)
+ 0000098F  49/ 89 49 10			mov [r9+10h],rcx		;preserve rcx(context)
+ 00000993  49/ 89 51 18			mov [r9+18h],rdx		;preserve rdx(instruction ptr)
+ 00000997  4D/ 89 41 20			mov [r9+20h],r8			;preserve r8(handler table)
+ 0000099B  4C/ 8B 4C 24			mov r9,[rsp+20h]
+	   20
+ 000009A0  4C/ 8B 44 24			mov r8,[rsp+18h]
+	   18
+ 000009A5  48/ 8B 54 24			mov rdx,[rsp+10h]
+	   10
+ 000009AA  48/ 8B 4C 24			mov rcx,[rsp+8h]
+	   08
+ 000009AF  58				pop rax					;pop call address from stack
+ 000009B0  FF D0			call rax				;call it omegalawl(large(big(sizeable)))
+ 000009B2  50				push rax				;push the value it returns
+ 000009B3  4D/ 8B CC			mov r9,r12				;restore r9
+ 000009B6  4D/ 8B 41 20			mov r8,[r9+20h]			;restore the rest of the registers
+ 000009BA  49/ 8B 51 18			mov rdx,[r9+18h]
+ 000009BE  49/ 8B 49 10			mov rcx,[r9+10h]
+ 000009C2  48/ 83 C2 01			add rdx,1h
+ 000009C6  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000009CA  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000009CE			ViX86Call endp
+
+ 000009CE			ViEditsp proc
+ 000009CE  48/ 0F BF 42			movsx rax,word ptr[rdx+1h]
+	   01
+ 000009D3  48/ 03 E0			add rsp,rax
+ 000009D6  48/ 83 C2 03			add rdx,3h
+ 000009DA  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000009DE  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000009E2			ViEditsp endp
+
+ 000009E2			ViStsp proc
+ 000009E2  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000009E7  48/ 89 24 C1			mov [rcx+rax*8h],rsp
+ 000009EB  48/ 83 C2 02			add rdx,2h
+ 000009EF  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 000009F3  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 000009F7			ViStsp endp
+
+ 000009F7			ViLdsp proc
+ 000009F7  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 000009FC  48/ 8B 24 C1			mov rsp,[rcx+rax*8h]
+ 00000A00  48/ 83 C2 02			add rdx,2h
+ 00000A04  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A08  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A0C			ViLdsp endp
+
+ 00000A0C			ViStip proc
+ 00000A0C  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 00000A11  48/ 83 C2 02			add rdx,2h
+ 00000A15  48/ 89 14 C1			mov [rcx+rax*8h],rdx
+ 00000A19  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A1D  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A21			ViStip endp
+
+ 00000A21			ViLdip proc
+ 00000A21  48/ 0F B6 42			movzx rax,byte ptr[rdx+1h]
+	   01
+ 00000A26  48/ 8B 14 C1			mov rdx,[rcx+rax*8h]
+ 00000A2A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A2E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A32			ViLdip endp
+
+ 00000A32			ViSwapb proc
+ 00000A32  44/ 8A 14 24			mov r10b,byte ptr[rsp]
+ 00000A36  44/ 8A 5C 24			mov r11b,byte ptr[rsp+1h]
+	   01
+ 00000A3B  44/ 88 54 24			mov byte ptr[rsp+1h],r10b
+	   01
+ 00000A40  44/ 88 1C 24			mov byte ptr[rsp],r11b
+ 00000A44  48/ 83 C2 01			add rdx,1h
+ 00000A48  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A4C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A50			ViSwapb endp
+
+ 00000A50			ViSwapw proc
+ 00000A50  66| 44/ 8B 14 24		mov r10w,word ptr[rsp]
+ 00000A55  66| 44/ 8B 5C 24		mov r11w,word ptr[rsp+2h]
+	   02
+ 00000A5B  66| 44/ 89 54 24		mov word ptr[rsp+2h],r10w
+	   02
+ 00000A61  66| 44/ 89 1C 24		mov word ptr[rsp],r11w
+ 00000A66  48/ 83 C2 01			add rdx,1h
+ 00000A6A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A6E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A72			ViSwapw endp
+
+ 00000A72			ViSwapd proc
+ 00000A72  44/ 8B 14 24			mov r10d,dword ptr[rsp]
+ 00000A76  44/ 8B 5C 24			mov r11d,dword ptr[rsp+4h]
+	   04
+ 00000A7B  44/ 89 54 24			mov dword ptr[rsp+4h],r10d
+	   04
+ 00000A80  44/ 89 1C 24			mov dword ptr[rsp],r11d
+ 00000A84  48/ 83 C2 01			add rdx,1h
+ 00000A88  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000A8C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000A90			ViSwapd endp
+
+ 00000A90			ViSwapq proc
+ 00000A90  41/ 5A			pop r10
+ 00000A92  41/ 5B			pop r11
+ 00000A94  41/ 52			push r10
+ 00000A96  41/ 53			push r11
+ 00000A98  48/ 83 C2 01			add rdx,1h
+ 00000A9C  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AA0  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AA4			ViSwapq endp
+
+ 00000AA4			ViDecb proc
+ 00000AA4  80 2C 24 01			sub byte ptr[rsp],1h
+ 00000AA8  9C				pushfq
+ 00000AA9  48/ 83 C2 01			add rdx,1h
+ 00000AAD  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AB1  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AB5			ViDecb endp
+
+ 00000AB5			ViDecw proc
+ 00000AB5  66| 83 2C 24			sub word ptr[rsp],1h
+	   01
+ 00000ABA  9C				pushfq
+ 00000ABB  48/ 83 C2 01			add rdx,1h
+ 00000ABF  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AC3  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AC7			ViDecw endp
+
+ 00000AC7			ViDecd proc
+ 00000AC7  83 2C 24 01			sub dword ptr[rsp],1h
+ 00000ACB  9C				pushfq
+ 00000ACC  48/ 83 C2 01			add rdx,1h
+ 00000AD0  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AD4  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AD8			ViDecd endp
+
+ 00000AD8			ViDecq proc
+ 00000AD8  48/ 83 2C 24			sub qword ptr[rsp],1h
+	   01
+ 00000ADD  9C				pushfq
+ 00000ADE  48/ 83 C2 01			add rdx,1h
+ 00000AE2  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AE6  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AEA			ViDecq endp
+
+ 00000AEA			ViIncb proc
+ 00000AEA  80 04 24 01			add byte ptr[rsp],1h
+ 00000AEE  9C				pushfq
+ 00000AEF  48/ 83 C2 01			add rdx,1h
+ 00000AF3  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000AF7  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000AFB			ViIncb endp
+
+ 00000AFB			ViIncw proc
+ 00000AFB  66| 83 04 24			add word ptr[rsp],1h
+	   01
+ 00000B00  9C				pushfq
+ 00000B01  48/ 83 C2 01			add rdx,1h
+ 00000B05  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B09  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B0D			ViIncw endp
+
+ 00000B0D			ViIncd proc
+ 00000B0D  83 04 24 01			add dword ptr[rsp],1h
+ 00000B11  9C				pushfq
+ 00000B12  48/ 83 C2 01			add rdx,1h
+ 00000B16  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B1A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B1E			ViIncd endp
+
+ 00000B1E			ViIncq proc
+ 00000B1E  48/ 83 04 24			add qword ptr[rsp],1h
+	   01
+ 00000B23  9C				pushfq
+ 00000B24  48/ 83 C2 01			add rdx,1h
+ 00000B28  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B2C  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B30			ViIncq endp
+
+ 00000B30			ViSwapbq proc
+ 00000B30  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 00000B34  44/ 8A 44 24			mov r8b,byte ptr[rsp+8h]
+	   08
+ 00000B39  48/ 89 44 24			mov qword ptr[rsp+1h],rax
+	   01
+ 00000B3E  44/ 88 04 24			mov byte ptr[rsp],r8b
+ 00000B42  48/ 83 C2 01			add rdx,1h
+ 00000B46  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B4A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B4E			ViSwapbq endp
+
+ 00000B4E			ViSwapwq proc
+ 00000B4E  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 00000B52  66| 44/ 8B 44 24		mov r8w,word ptr[rsp+8h]
+	   08
+ 00000B58  48/ 89 44 24			mov qword ptr[rsp+2h],rax
+	   02
+ 00000B5D  66| 44/ 89 04 24		mov word ptr[rsp],r8w
+ 00000B62  48/ 83 C2 01			add rdx,1h
+ 00000B66  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B6A  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B6E			ViSwapwq endp
+
+ 00000B6E			ViSwapdq proc
+ 00000B6E  48/ 8B 04 24			mov rax,qword ptr[rsp]
+ 00000B72  44/ 8B 44 24			mov r8d,dword ptr[rsp+8h]
+	   08
+ 00000B77  48/ 89 44 24			mov qword ptr[rsp+4h],rax
+	   04
+ 00000B7C  44/ 89 04 24			mov dword ptr[rsp],r8d
+ 00000B80  48/ 83 C2 01			add rdx,1h
+ 00000B84  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000B88  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000B8C			ViSwapdq endp
+
+ 00000B8C			ViLdsb proc
+ 00000B8C  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000B90  8A 04 04			mov al,byte ptr[rsp+rax]
+ 00000B93  48/ 83 EC 01			sub rsp,1h
+ 00000B97  88 04 24			mov byte ptr[rsp],al
+ 00000B9A  48/ 83 C2 09			add rdx,9h
+ 00000B9E  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000BA2  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000BA6			ViLdsb endp
+
+ 00000BA6			ViLdsw proc
+ 00000BA6  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000BAA  66| 8B 04 04			mov ax,word ptr[rsp+rax]
+ 00000BAE  48/ 83 EC 02			sub rsp,2h
+ 00000BB2  66| 89 04 24			mov word ptr[rsp],ax
+ 00000BB6  48/ 83 C2 09			add rdx,9h
+ 00000BBA  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000BBE  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000BC2			ViLdsw endp
+
+ 00000BC2			ViLdsd proc
+ 00000BC2  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000BC6  8B 04 04			mov eax,dword ptr[rsp+rax]
+ 00000BC9  48/ 83 EC 04			sub rsp,4h
+ 00000BCD  89 04 24			mov dword ptr[rsp],eax
+ 00000BD0  48/ 83 C2 09			add rdx,9h
+ 00000BD4  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000BD8  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000BDC			ViLdsd endp
+
+ 00000BDC			ViLdsq proc
+ 00000BDC  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000BE0  FF 34 04			push qword ptr[rsp+rax]
+ 00000BE3  48/ 83 C2 09			add rdx,9h
+ 00000BE7  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000BEB  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000BEF			ViLdsq endp
+
+ 00000BEF			ViStsb proc
+ 00000BEF  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000BF3  44/ 8A 24 24			mov r12b,byte ptr[rsp]
+ 00000BF7  44/ 88 24 04			mov byte ptr[rsp+rax],r12b
+ 00000BFB  48/ 83 C4 01			add rsp,1h
+ 00000BFF  48/ 83 C2 09			add rdx,9h
+ 00000C03  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000C07  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000C0B			ViStsb endp
+
+ 00000C0B			ViStsw proc
+ 00000C0B  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000C0F  66| 44/ 8B 24 24		mov r12w,word ptr[rsp]
+ 00000C14  66| 44/ 89 24 04		mov word ptr[rsp+rax],r12w
+ 00000C19  48/ 83 C4 02			add rsp,2h
+ 00000C1D  48/ 83 C2 09			add rdx,9h
+ 00000C21  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000C25  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000C29			ViStsw endp
+
+ 00000C29			ViStsd proc
+ 00000C29  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000C2D  44/ 8B 24 24			mov r12d,dword ptr[rsp]
+ 00000C31  44/ 89 24 04			mov dword ptr[rsp+rax],r12d
+ 00000C35  48/ 83 C4 04			add rsp,4h
+ 00000C39  48/ 83 C2 09			add rdx,9h
+ 00000C3D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000C41  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000C45			ViStsd endp
+
+ 00000C45			ViStsq proc
+ 00000C45  48/ 8B 42 01			mov rax,qword ptr[rdx+1h]
+ 00000C49  4C/ 8B 24 24			mov r12,qword ptr[rsp]
+ 00000C4D  4C/ 89 24 04			mov qword ptr[rsp+rax],r12
+ 00000C51  48/ 83 C4 08			add rsp,8h
+ 00000C55  48/ 83 C2 09			add rdx,9h
+ 00000C59  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000C5D  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000C61			ViStsq endp
+
+ 00000C61			ViLdbpb proc
+ 00000C61  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000C66  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000C6D  8A 00			mov al,byte ptr[rax]
+ 00000C6F  48/ 83 EC 01			sub rsp,1h
+ 00000C73  88 04 24			mov byte ptr[rsp],al
+ 00000C76  48/ 83 C2 03			add rdx,3h
+ 00000C7A  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000C7E  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000C82			ViLdbpb endp
+
+ 00000C82			ViLdbpw proc
+ 00000C82  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000C87  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000C8E  66| 8B 00			mov ax,word ptr[rax]
+ 00000C91  48/ 83 EC 02			sub rsp,2h
+ 00000C95  66| 89 04 24			mov word ptr[rsp],ax
+ 00000C99  48/ 83 C2 03			add rdx,3h
+ 00000C9D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000CA1  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000CA5			ViLdbpw endp
+
+ 00000CA5			ViLdbpd proc
+ 00000CA5  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000CAA  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000CB1  8B 00			mov eax,dword ptr[rax]
+ 00000CB3  48/ 83 EC 04			sub rsp,4h
+ 00000CB7  89 04 24			mov dword ptr[rsp],eax
+ 00000CBA  48/ 83 C2 03			add rdx,3h
+ 00000CBE  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000CC2  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000CC6			ViLdbpd endp
+
+ 00000CC6			ViLdbpq proc
+ 00000CC6  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000CCB  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000CD2  FF 30			push qword ptr[rax]
+ 00000CD4  48/ 83 C2 03			add rdx,3h
+ 00000CD8  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000CDC  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000CE0			ViLdbpq endp
+
+ 00000CE0			ViStbpb proc
+ 00000CE0  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000CE5  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000CEC  44/ 8A 24 24			mov r12b,[rsp]
+ 00000CF0  48/ 83 C4 01			add rsp,1h
+ 00000CF4  44/ 88 20			mov [rax],r12b
+ 00000CF7  48/ 83 C2 03			add rdx,3h
+ 00000CFB  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000CFF  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000D03			ViStbpb endp
+
+ 00000D03			ViStbpw proc
+ 00000D03  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000D08  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000D0F  66| 44/ 8B 24 24		mov r12w,[rsp]
+ 00000D14  48/ 83 C4 02			add rsp,2h
+ 00000D18  66| 44/ 89 20		mov [rax],r12w
+ 00000D1C  48/ 83 C2 03			add rdx,3h
+ 00000D20  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000D24  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000D28			ViStbpw endp
+
+ 00000D28			ViStbpd proc
+ 00000D28  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000D2D  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000D34  44/ 8B 24 24			mov r12d,[rsp]
+ 00000D38  48/ 83 C4 04			add rsp,4h
+ 00000D3C  44/ 89 20			mov [rax],r12d
+ 00000D3F  48/ 83 C2 03			add rdx,3h
+ 00000D43  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000D47  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000D4B			ViStbpd endp
+
+ 00000D4B			ViStbpq proc
+ 00000D4B  48/ 0F BF 42			movsx rax,word ptr[rdx+1]
+	   01
+ 00000D50  48/ 03 81			add rax,[rcx+0F8h]
+	   000000F8
+ 00000D57  8F 00			pop [rax]
+ 00000D59  48/ 83 C2 03			add rdx,3h
+ 00000D5D  48/ 0F B6 02			movzx rax,byte ptr[rdx]
+ 00000D61  41/ FF 24 C0			jmp qword ptr[r8+rax*8h]
+ 00000D65			ViStbpq endp
+
+				end
+Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/25/21 19:10:37
+StackMachine.asm					     Symbols 2 - 1
+
+
+
+
+Procedures, parameters, and locals:
+
+                N a m e                 Type     Value    Attr
+
+ViAddb . . . . . . . . . . . . .	P 	 0000049C _TEXT	Length= 00000017 Public
+ViAddd . . . . . . . . . . . . .	P 	 000004CC _TEXT	Length= 00000017 Public
+ViAddq . . . . . . . . . . . . .	P 	 000004E3 _TEXT	Length= 00000012 Public
+ViAddw . . . . . . . . . . . . .	P 	 000004B3 _TEXT	Length= 00000019 Public
+ViAndb . . . . . . . . . . . . .	P 	 00000652 _TEXT	Length= 00000017 Public
+ViAndd . . . . . . . . . . . . .	P 	 00000682 _TEXT	Length= 00000017 Public
+ViAndq . . . . . . . . . . . . .	P 	 00000699 _TEXT	Length= 00000012 Public
+ViAndw . . . . . . . . . . . . .	P 	 00000669 _TEXT	Length= 00000019 Public
+ViCall . . . . . . . . . . . . .	P 	 0000096C _TEXT	Length= 00000017 Public
+ViCmpb . . . . . . . . . . . . .	P 	 00000849 _TEXT	Length= 00000014 Public
+ViCmpd . . . . . . . . . . . . .	P 	 00000873 _TEXT	Length= 00000014 Public
+ViCmpq . . . . . . . . . . . . .	P 	 00000887 _TEXT	Length= 00000016 Public
+ViCmpw . . . . . . . . . . . . .	P 	 0000085D _TEXT	Length= 00000016 Public
+ViDecb . . . . . . . . . . . . .	P 	 00000AA4 _TEXT	Length= 00000011 Public
+ViDecd . . . . . . . . . . . . .	P 	 00000AC7 _TEXT	Length= 00000011 Public
+ViDecq . . . . . . . . . . . . .	P 	 00000AD8 _TEXT	Length= 00000012 Public
+ViDecw . . . . . . . . . . . . .	P 	 00000AB5 _TEXT	Length= 00000012 Public
+ViDivb . . . . . . . . . . . . .	P 	 000005BF _TEXT	Length= 00000020 Public
+ViDivd . . . . . . . . . . . . .	P 	 00000607 _TEXT	Length= 00000023 Public
+ViDivq . . . . . . . . . . . . .	P 	 0000062A _TEXT	Length= 00000028 Public
+ViDivw . . . . . . . . . . . . .	P 	 000005DF _TEXT	Length= 00000028 Public
+ViEditsp . . . . . . . . . . . .	P 	 000009CE _TEXT	Length= 00000014 Public
+ViIncb . . . . . . . . . . . . .	P 	 00000AEA _TEXT	Length= 00000011 Public
+ViIncd . . . . . . . . . . . . .	P 	 00000B0D _TEXT	Length= 00000011 Public
+ViIncq . . . . . . . . . . . . .	P 	 00000B1E _TEXT	Length= 00000012 Public
+ViIncw . . . . . . . . . . . . .	P 	 00000AFB _TEXT	Length= 00000012 Public
+ViJge  . . . . . . . . . . . . .	P 	 00000912 _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 00000921 _TEXT	
+ViJg . . . . . . . . . . . . . .	P 	 000008F4 _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 00000903 _TEXT	
+ViJle  . . . . . . . . . . . . .	P 	 000008D6 _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 000008E5 _TEXT	
+ViJl . . . . . . . . . . . . . .	P 	 000008B8 _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 000008C7 _TEXT	
+ViJmpi . . . . . . . . . . . . .	P 	 000008A9 _TEXT	Length= 0000000F Public
+ViJmp  . . . . . . . . . . . . .	P 	 0000089D _TEXT	Length= 0000000C Public
+ViJnz  . . . . . . . . . . . . .	P 	 0000094E _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 0000095D _TEXT	
+ViJz . . . . . . . . . . . . . .	P 	 00000930 _TEXT	Length= 0000001E Public
+  DoJump . . . . . . . . . . . .	L 	 0000093F _TEXT	
+ViLdab . . . . . . . . . . . . .	P 	 00000183 _TEXT	Length= 00000019 Public
+ViLdad . . . . . . . . . . . . .	P 	 000001B7 _TEXT	Length= 00000019 Public
+ViLdaq . . . . . . . . . . . . .	P 	 000001D0 _TEXT	Length= 00000012 Public
+ViLdaw . . . . . . . . . . . . .	P 	 0000019C _TEXT	Length= 0000001B Public
+ViLdbpb  . . . . . . . . . . . .	P 	 00000C61 _TEXT	Length= 00000021 Public
+ViLdbpd  . . . . . . . . . . . .	P 	 00000CA5 _TEXT	Length= 00000021 Public
+ViLdbpq  . . . . . . . . . . . .	P 	 00000CC6 _TEXT	Length= 0000001A Public
+ViLdbpw  . . . . . . . . . . . .	P 	 00000C82 _TEXT	Length= 00000023 Public
+ViLdibsxd  . . . . . . . . . . .	P 	 00000089 _TEXT	Length= 00000017 Public
+ViLdibsxq  . . . . . . . . . . .	P 	 000000A0 _TEXT	Length= 00000019 Public
+ViLdibsxw  . . . . . . . . . . .	P 	 00000070 _TEXT	Length= 00000019 Public
+ViLdibzxd  . . . . . . . . . . .	P 	 00000113 _TEXT	Length= 00000017 Public
+ViLdibzxq  . . . . . . . . . . .	P 	 0000012A _TEXT	Length= 00000019 Public
+ViLdibzxw  . . . . . . . . . . .	P 	 000000FA _TEXT	Length= 00000019 Public
+ViLdib . . . . . . . . . . . . .	P 	 0000001B _TEXT	Length= 00000016 Public
+ViLdidsxq  . . . . . . . . . . .	P 	 000000E9 _TEXT	Length= 00000011 Public
+ViLdidzxq  . . . . . . . . . . .	P 	 00000173 _TEXT	Length= 00000010 Public
+ViLdid . . . . . . . . . . . . .	P 	 00000049 _TEXT	Length= 00000016 Public
+ViLdip . . . . . . . . . . . . .	P 	 00000A21 _TEXT	Length= 00000011 Public
+ViLdiq . . . . . . . . . . . . .	P 	 0000005F _TEXT	Length= 00000011 Public
+ViLdiwsxd  . . . . . . . . . . .	P 	 000000B9 _TEXT	Length= 00000017 Public
+ViLdiwsxq  . . . . . . . . . . .	P 	 000000D0 _TEXT	Length= 00000019 Public
+ViLdiwzxd  . . . . . . . . . . .	P 	 00000143 _TEXT	Length= 00000017 Public
+ViLdiwzxq  . . . . . . . . . . .	P 	 0000015A _TEXT	Length= 00000019 Public
+ViLdiw . . . . . . . . . . . . .	P 	 00000031 _TEXT	Length= 00000018 Public
+ViLdsb . . . . . . . . . . . . .	P 	 00000B8C _TEXT	Length= 0000001A Public
+ViLdsd . . . . . . . . . . . . .	P 	 00000BC2 _TEXT	Length= 0000001A Public
+ViLdsp . . . . . . . . . . . . .	P 	 000009F7 _TEXT	Length= 00000015 Public
+ViLdsq . . . . . . . . . . . . .	P 	 00000BDC _TEXT	Length= 00000013 Public
+ViLdsw . . . . . . . . . . . . .	P 	 00000BA6 _TEXT	Length= 0000001C Public
+ViMulb . . . . . . . . . . . . .	P 	 0000054E _TEXT	Length= 00000018 Public
+ViMuld . . . . . . . . . . . . .	P 	 00000585 _TEXT	Length= 0000001B Public
+ViMulq . . . . . . . . . . . . .	P 	 000005A0 _TEXT	Length= 0000001F Public
+ViMulw . . . . . . . . . . . . .	P 	 00000566 _TEXT	Length= 0000001F Public
+ViNop  . . . . . . . . . . . . .	P 	 0000000F _TEXT	Length= 0000000C Public
+ViNpopb  . . . . . . . . . . . .	P 	 0000045C _TEXT	Length= 00000010 Public
+ViNpopd  . . . . . . . . . . . .	P 	 0000047C _TEXT	Length= 00000010 Public
+ViNpopq  . . . . . . . . . . . .	P 	 0000048C _TEXT	Length= 00000010 Public
+ViNpopw  . . . . . . . . . . . .	P 	 0000046C _TEXT	Length= 00000010 Public
+ViOrb  . . . . . . . . . . . . .	P 	 000006AB _TEXT	Length= 00000017 Public
+ViOrd  . . . . . . . . . . . . .	P 	 000006DB _TEXT	Length= 00000017 Public
+ViOrq  . . . . . . . . . . . . .	P 	 000006F2 _TEXT	Length= 00000012 Public
+ViOrw  . . . . . . . . . . . . .	P 	 000006C2 _TEXT	Length= 00000019 Public
+ViPopb . . . . . . . . . . . . .	P 	 000003EC _TEXT	Length= 0000001D Public
+ViPopd . . . . . . . . . . . . .	P 	 00000428 _TEXT	Length= 0000001D Public
+ViPopq . . . . . . . . . . . . .	P 	 00000445 _TEXT	Length= 00000017 Public
+ViPopw . . . . . . . . . . . . .	P 	 00000409 _TEXT	Length= 0000001F Public
+ViPushb  . . . . . . . . . . . .	P 	 00000385 _TEXT	Length= 0000001B Public
+ViPushd  . . . . . . . . . . . .	P 	 000003BD _TEXT	Length= 0000001B Public
+ViPushq  . . . . . . . . . . . .	P 	 000003D8 _TEXT	Length= 00000014 Public
+ViPushw  . . . . . . . . . . . .	P 	 000003A0 _TEXT	Length= 0000001D Public
+ViRet  . . . . . . . . . . . . .	P 	 00000983 _TEXT	Length= 00000009 Public
+ViShlb . . . . . . . . . . . . .	P 	 0000075D _TEXT	Length= 0000001D Public
+ViShld . . . . . . . . . . . . .	P 	 00000798 _TEXT	Length= 0000001D Public
+ViShlq . . . . . . . . . . . . .	P 	 000007B5 _TEXT	Length= 0000001E Public
+ViShlw . . . . . . . . . . . . .	P 	 0000077A _TEXT	Length= 0000001E Public
+ViShrb . . . . . . . . . . . . .	P 	 000007D3 _TEXT	Length= 0000001D Public
+ViShrd . . . . . . . . . . . . .	P 	 0000080E _TEXT	Length= 0000001D Public
+ViShrq . . . . . . . . . . . . .	P 	 0000082B _TEXT	Length= 0000001E Public
+ViShrw . . . . . . . . . . . . .	P 	 000007F0 _TEXT	Length= 0000001E Public
+ViStab . . . . . . . . . . . . .	P 	 000001E2 _TEXT	Length= 0000001B Public
+ViStad . . . . . . . . . . . . .	P 	 0000021A _TEXT	Length= 0000001B Public
+ViStaq . . . . . . . . . . . . .	P 	 00000235 _TEXT	Length= 00000015 Public
+ViStaw . . . . . . . . . . . . .	P 	 000001FD _TEXT	Length= 0000001D Public
+ViStbpb  . . . . . . . . . . . .	P 	 00000CE0 _TEXT	Length= 00000023 Public
+ViStbpd  . . . . . . . . . . . .	P 	 00000D28 _TEXT	Length= 00000023 Public
+ViStbpq  . . . . . . . . . . . .	P 	 00000D4B _TEXT	Length= 0000001A Public
+ViStbpw  . . . . . . . . . . . .	P 	 00000D03 _TEXT	Length= 00000025 Public
+ViStip . . . . . . . . . . . . .	P 	 00000A0C _TEXT	Length= 00000015 Public
+ViStsb . . . . . . . . . . . . .	P 	 00000BEF _TEXT	Length= 0000001C Public
+ViStsd . . . . . . . . . . . . .	P 	 00000C29 _TEXT	Length= 0000001C Public
+ViStsp . . . . . . . . . . . . .	P 	 000009E2 _TEXT	Length= 00000015 Public
+ViStsq . . . . . . . . . . . . .	P 	 00000C45 _TEXT	Length= 0000001C Public
+ViStsw . . . . . . . . . . . . .	P 	 00000C0B _TEXT	Length= 0000001E Public
+ViSubb . . . . . . . . . . . . .	P 	 000004F5 _TEXT	Length= 00000017 Public
+ViSubd . . . . . . . . . . . . .	P 	 00000525 _TEXT	Length= 00000017 Public
+ViSubq . . . . . . . . . . . . .	P 	 0000053C _TEXT	Length= 00000012 Public
+ViSubw . . . . . . . . . . . . .	P 	 0000050C _TEXT	Length= 00000019 Public
+ViSwapbq . . . . . . . . . . . .	P 	 00000B30 _TEXT	Length= 0000001E Public
+ViSwapb  . . . . . . . . . . . .	P 	 00000A32 _TEXT	Length= 0000001E Public
+ViSwapdq . . . . . . . . . . . .	P 	 00000B6E _TEXT	Length= 0000001E Public
+ViSwapd  . . . . . . . . . . . .	P 	 00000A72 _TEXT	Length= 0000001E Public
+ViSwapq  . . . . . . . . . . . .	P 	 00000A90 _TEXT	Length= 00000014 Public
+ViSwapwq . . . . . . . . . . . .	P 	 00000B4E _TEXT	Length= 00000020 Public
+ViSwapw  . . . . . . . . . . . .	P 	 00000A50 _TEXT	Length= 00000022 Public
+ViSxbd . . . . . . . . . . . . .	P 	 00000265 _TEXT	Length= 00000019 Public
+ViSxbq . . . . . . . . . . . . .	P 	 0000027E _TEXT	Length= 0000001B Public
+ViSxbw . . . . . . . . . . . . .	P 	 0000024A _TEXT	Length= 0000001B Public
+ViSxdq . . . . . . . . . . . . .	P 	 000002CF _TEXT	Length= 0000001A Public
+ViSxwd . . . . . . . . . . . . .	P 	 00000299 _TEXT	Length= 0000001A Public
+ViSxwq . . . . . . . . . . . . .	P 	 000002B3 _TEXT	Length= 0000001C Public
+ViVmExit . . . . . . . . . . . .	P 	 0000000B _TEXT	Length= 00000004 Public
+ViX86Call  . . . . . . . . . . .	P 	 0000098C _TEXT	Length= 00000042 Public
+ViXorb . . . . . . . . . . . . .	P 	 00000704 _TEXT	Length= 00000017 Public
+ViXord . . . . . . . . . . . . .	P 	 00000734 _TEXT	Length= 00000017 Public
+ViXorq . . . . . . . . . . . . .	P 	 0000074B _TEXT	Length= 00000012 Public
+ViXorw . . . . . . . . . . . . .	P 	 0000071B _TEXT	Length= 00000019 Public
+ViZxbd . . . . . . . . . . . . .	P 	 00000304 _TEXT	Length= 00000019 Public
+ViZxbq . . . . . . . . . . . . .	P 	 0000031D _TEXT	Length= 0000001B Public
+ViZxbw . . . . . . . . . . . . .	P 	 000002E9 _TEXT	Length= 0000001B Public
+ViZxdq . . . . . . . . . . . . .	P 	 0000036E _TEXT	Length= 00000017 Public
+ViZxwd . . . . . . . . . . . . .	P 	 00000338 _TEXT	Length= 0000001A Public
+ViZxwq . . . . . . . . . . . . .	P 	 00000352 _TEXT	Length= 0000001C Public
+VmEnter  . . . . . . . . . . . .	P 	 00000000 _TEXT	Length= 0000000B Public
+
+
+Symbols:
+
+                N a m e                 Type     Value    Attr
+
+
+	   0 Warnings
+	   0 Errors

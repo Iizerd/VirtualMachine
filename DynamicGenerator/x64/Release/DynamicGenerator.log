@@ -1,0 +1,10 @@
+﻿  Assembling StackMachine.asm...
+  main.cpp
+  VmAssembler.cpp
+C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp(632,49): warning C4312: 'type cast': conversion from 'INT' to 'PVOID' of greater size
+C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp(913,27): warning C4311: 'type cast': pointer truncation from 'PVOID' to 'INT'
+  VmSdk.cpp
+  Generating Code...
+C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSectionAppender.h(93): warning C4715: 'AddSection': not all control paths return a value
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  DynamicGenerator.vcxproj -> C:\Users\Iizerd\source\repos\StackMachine\x64\Release\DynamicGenerator.exe

@@ -1,0 +1,22 @@
+   ;r11q = array length
+    ;r12b = xor byte
+    ;r13q = array address start
+XorArray:
+    pushb r12
+    pushq r13       ;push cur address in array
+    pushq r11
+LoopStart:
+    swapq           ;swap top two items
+    ldab            ;load byte from the address
+    ldsb 17
+    xorb
+    npopq           ;pop unused rflags
+    stab            ;store the byte
+    ldiq 1
+    addq
+    npopq           ;pop unused rflags
+    swapq           ;swap to access array size
+    decq            ;dec array size
+    jnz LoopStart
+    editsp 17
+    vmexit

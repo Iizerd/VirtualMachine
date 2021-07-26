@@ -1,0 +1,11 @@
+ldibsxq 6
+ldibsxq 5
+ldibsxq 4
+ldibsxq 3
+ldibsxq 2
+ldibsxq 1
+pushq r1
+x86call
+popq r1
+editsp 48
+vmexit

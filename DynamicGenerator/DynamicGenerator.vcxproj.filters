@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="VmSdk.h">
+      <Filter>VmSdk</Filter>
+    </ClInclude>
+    <ClInclude Include="VmDefs.h">
+      <Filter>Defs</Filter>
+    </ClInclude>
+    <ClInclude Include="VmAssembler.h">
+      <Filter>VmAssembler</Filter>
+    </ClInclude>
+    <ClInclude Include="VmHandlerDefs.h">
+      <Filter>Defs</Filter>
+    </ClInclude>
+    <ClInclude Include="VmSectionAppender.h">
+      <Filter>VmAssembler</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="VmSdk.cpp">
+      <Filter>VmSdk</Filter>
+    </ClCompile>
+    <ClCompile Include="VmAssembler.cpp">
+      <Filter>VmAssembler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="VmSdk">
+      <UniqueIdentifier>{6337886a-e40d-4908-b494-c4215d1d49d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Defs">
+      <UniqueIdentifier>{1e5c9155-07ce-4766-98d0-965133f16a6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VmAssembler">
+      <UniqueIdentifier>{109e278e-9664-4fe8-b39c-bed310c5a122}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="StackMachine.asm">
+      <Filter>VmAssembler</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>
