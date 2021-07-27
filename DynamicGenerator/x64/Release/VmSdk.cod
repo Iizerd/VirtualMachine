@@ -48,7 +48,7 @@ $unwind$?VMSDKGetSymbol@@YAPEAXPEAU_VM_DATA@@PEBD@Z DD 060f01H
 	DD	013405H
 xdata	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSdk.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSdk.cpp
 ;	COMDAT ?VMSDKEnterAtSymbol@@YAXPEAU_VM_DATA@@PEAT_VM_CONTEXT@@PEAXPEAU_VM_HANDLER_TABLE@@PEAU_VM_AUX_STORAGE@@@Z
 _TEXT	SEGMENT
 VmData$ = 16
@@ -91,7 +91,7 @@ $LN4:
 ?VMSDKEnterAtSymbol@@YAXPEAU_VM_DATA@@PEAT_VM_CONTEXT@@PEAXPEAU_VM_HANDLER_TABLE@@PEAU_VM_AUX_STORAGE@@@Z ENDP ; VMSDKEnterAtSymbol
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSdk.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSdk.cpp
 ;	COMDAT ?VMSDKBuildHandlerTableInPlace@@YAXPEAU_VM_DATA@@PEAU_VM_HANDLER_TABLE@@@Z
 _TEXT	SEGMENT
 VmData$ = 8
@@ -140,7 +140,7 @@ $LL4@VMSDKBuild:
 ?VMSDKBuildHandlerTableInPlace@@YAXPEAU_VM_DATA@@PEAU_VM_HANDLER_TABLE@@@Z ENDP ; VMSDKBuildHandlerTableInPlace
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSdk.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSdk.cpp
 ;	COMDAT ?VMSDKBuildHandlerTable@@YAPEAU_VM_HANDLER_TABLE@@PEAU_VM_DATA@@@Z
 _TEXT	SEGMENT
 VmData$ = 48
@@ -206,7 +206,7 @@ $LL7@VMSDKBuild:
 ?VMSDKBuildHandlerTable@@YAPEAU_VM_HANDLER_TABLE@@PEAU_VM_DATA@@@Z ENDP ; VMSDKBuildHandlerTable
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSdk.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSdk.cpp
 ;	COMDAT ?VMSDKGetSymbol@@YAPEAXPEAU_VM_DATA@@PEBD@Z
 _TEXT	SEGMENT
 VmData$ = 8
@@ -286,7 +286,7 @@ $LN8@VMSDKGetSy:
 ?VMSDKGetSymbol@@YAPEAXPEAU_VM_DATA@@PEBD@Z ENDP	; VMSDKGetSymbol
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSdk.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSdk.cpp
 ;	COMDAT ?VMSDKInit@@YAHPEAU_VM_DATA@@PEAX@Z
 _TEXT	SEGMENT
 VmData$ = 8

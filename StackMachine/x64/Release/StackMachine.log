@@ -1,12 +1,12 @@
 ﻿  Assembling StackMachine.asm...
   main.cpp
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(15,20): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(21,9): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'LONG64'
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(21,9): message : consider using '%lli' in the format string
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(21,9): message : consider using '%Ii' in the format string
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(21,9): message : consider using '%I64i' in the format string
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(69,30): warning C4267: 'initializing': conversion from 'size_t' to 'ULONG', possible loss of data
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(85,36): warning C4267: 'argument': conversion from 'size_t' to 'ULONG', possible loss of data
-C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp(86,36): warning C4267: 'argument': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(15,20): warning C4018: '<': signed/unsigned mismatch
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(21,9): warning C4477: 'printf' : format string '%i' requires an argument of type 'int', but variadic argument 1 has type 'LONG64'
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(21,9): message : consider using '%lli' in the format string
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(21,9): message : consider using '%Ii' in the format string
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(21,9): message : consider using '%I64i' in the format string
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(69,30): warning C4267: 'initializing': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(85,36): warning C4267: 'argument': conversion from 'size_t' to 'ULONG', possible loss of data
+C:\$Fanta\VirtualMachine\StackMachine\main.cpp(86,36): warning C4267: 'argument': conversion from 'size_t' to 'ULONG', possible loss of data
   LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
-  StackMachine.vcxproj -> C:\Users\Iizerd\source\repos\StackMachine\x64\Release\StackMachine.exe
+  StackMachine.vcxproj -> C:\$Fanta\VirtualMachine\x64\Release\StackMachine.exe

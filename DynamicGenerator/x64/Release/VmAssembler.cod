@@ -14147,11 +14147,11 @@ $LN18@deallocate:
 ?deallocate@?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QEAAXQEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_K@Z ENDP ; std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::deallocate
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetVmEnterOpCode@@YAEPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 Assembler$ = 48
@@ -14168,7 +14168,7 @@ $LN9:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   0000a	48 8b 59 18	 mov	 rbx, QWORD PTR [rcx+24]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1062 : {
 
@@ -14178,7 +14178,7 @@ $LN9:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   00011	48 2b 59 10	 sub	 rbx, QWORD PTR [rcx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1063 : 	return Assembler->Instructions[0].OpCodes[rand() % Assembler->Instructions[0].OpCodes.size()];
 
@@ -14199,22 +14199,22 @@ $LN9:
 ?VmGetVmEnterOpCode@@YAEPEAU_VM_ASSEMBLER@@@Z ENDP	; VmGetVmEnterOpCode
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmBuildSymbolTable@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z
 _TEXT	SEGMENT
 SymbolTable$ = 32
@@ -14248,7 +14248,7 @@ $LN87:
 	20		 movdqu	 XMMWORD PTR SymbolTable$[rsp], xmm1
   00031	45 33 f6	 xor	 r14d, r14d
   00034	4c 89 74 24 30	 mov	 QWORD PTR SymbolTable$[rsp+16], r14
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1038 : 	ULONG RunningOffset = 0;
 
@@ -14329,7 +14329,7 @@ $LN22@VmBuildSym:
 
   000c1	4b 8d 04 c0	 lea	 rax, QWORD PTR [r8+r8*8]
   000c5	0f 57 c0	 xorps	 xmm0, xmm0
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1044 : 			memset(&SymbolTable[SymbolTable.size() - 1], 0, sizeof(VM_SYMBOL));
 
@@ -14371,7 +14371,7 @@ $LL7@VmBuildSym:
 
   0010b	48 8b 4f 20	 mov	 rcx, QWORD PTR [rdi+32]
 $LN36@VmBuildSym:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1047 : 				SymbolTable[SymbolTable.size() - 1].Name[i] = Link->Name[i];
 
@@ -14389,7 +14389,7 @@ $LN6@VmBuildSym:
 ; 1504 :         return _My_data._Myfirst[_Pos];
 
   00120	4b 8d 04 c0	 lea	 rax, QWORD PTR [r8+r8*8]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1049 : 			SymbolTable[SymbolTable.size() - 1].Offset = RunningOffset;
 
@@ -14427,7 +14427,7 @@ $LN3@VmBuildSym:
   0014d	48 8b c2	 mov	 rax, rdx
   00150	48 c1 e8 3f	 shr	 rax, 63			; 0000003fH
   00154	48 03 d0	 add	 rdx, rax
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1056 : 	*TotalTableSize = SymbolTable.size() * sizeof(VM_SYMBOL);
 
@@ -14518,7 +14518,7 @@ $LN69@VmBuildSym:
   001c3	48 8b ce	 mov	 rcx, rsi
   001c6	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
 $LN53@VmBuildSym:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 1059 : 	return RetTable;
 
@@ -14568,7 +14568,7 @@ TotalTableSize$ = 120
 ?dtor$0@?0??VmBuildSymbolTable@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z@4HA ENDP ; `VmBuildSymbolTable'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmBuildHandlerTable@@YAXPEAU_VM_ASSEMBLER@@PEAK@Z
 _TEXT	SEGMENT
 Assembler$ = 8
@@ -14632,7 +14632,7 @@ $LN3@VmBuildHan:
 ?VmBuildHandlerTable@@YAXPEAU_VM_ASSEMBLER@@PEAK@Z ENDP	; VmBuildHandlerTable
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmAssembleVmToBuffer@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z
 _TEXT	SEGMENT
 Assembler$ = 48
@@ -14761,21 +14761,21 @@ $LN3@VmAssemble:
 ?VmAssembleVmToBuffer@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z ENDP ; VmAssembleVmToBuffer
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmAssembleCodeToBuffer@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z
 _TEXT	SEGMENT
 T$1 = 96
@@ -14893,7 +14893,7 @@ $LL4@VmAssemble:
 
   00092	49 8b 5c c5 18	 mov	 rbx, QWORD PTR [r13+rax*8+24]
   00097	49 2b 5c c5 10	 sub	 rbx, QWORD PTR [r13+rax*8+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 848  : 			OpCode = Assembler->Instructions[Link->InstructionId].OpCodes[rand() % Assembler->Instructions[Link->InstructionId].OpCodes.size()]; //rand() % Assembler->Instructions[Link->InstructionId].OpCodes.size()
 
@@ -15135,7 +15135,7 @@ $LL31@VmAssemble:
 ; 2153 :         return _BUF_SIZE <= _Myres;
 
   00174	48 83 7e 38 10	 cmp	 QWORD PTR [rsi+56], 16
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 812  : 		if (Temp->Prev->IsLabel && Temp->Prev->Name == Jmp->Name)
 
@@ -15145,7 +15145,7 @@ $LL31@VmAssemble:
 ; 4091 :         return _Traits_equal<_Traits>(_Mypair._Myval2._Myptr(), _Mypair._Myval2._Mysize,
 
   0017d	48 8b 42 10	 mov	 rax, QWORD PTR [rdx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 812  : 		if (Temp->Prev->IsLabel && Temp->Prev->Name == Jmp->Name)
 
@@ -15192,7 +15192,7 @@ $LN48@VmAssemble:
   001a2	85 c0		 test	 eax, eax
   001a4	74 11		 je	 SHORT $LN82@VmAssemble
 $LN54@VmAssemble:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 817  : 		Delta -= VmGetInstructionLength(Temp->Prev->InstructionId);
 
@@ -15247,7 +15247,7 @@ $LL34@VmAssemble:
 ; 2153 :         return _BUF_SIZE <= _Myres;
 
   001ee	48 83 7e 38 10	 cmp	 QWORD PTR [rsi+56], 16
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 824  : 		if (Temp->Next->IsLabel && Temp->Next->Name == Jmp->Name)
 
@@ -15257,7 +15257,7 @@ $LL34@VmAssemble:
 ; 4091 :         return _Traits_equal<_Traits>(_Mypair._Myval2._Myptr(), _Mypair._Myval2._Mysize,
 
   001f7	48 8b 42 10	 mov	 rax, QWORD PTR [rdx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 824  : 		if (Temp->Next->IsLabel && Temp->Next->Name == Jmp->Name)
 
@@ -15304,7 +15304,7 @@ $LN68@VmAssemble:
   0021c	85 c0		 test	 eax, eax
   0021e	74 97		 je	 SHORT $LN82@VmAssemble
 $LN74@VmAssemble:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 829  : 		Delta += VmGetInstructionLength(Temp->Next->InstructionId);
 
@@ -15558,19 +15558,19 @@ $LN101@VmAssemble:
 ?VmAssembleCodeToBuffer@@YAPEAXPEAU_VM_ASSEMBLER@@PEAK@Z ENDP ; VmAssembleCodeToBuffer
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetJumpDelta@@YAHPEAU_CODE_LINK@@@Z
 _TEXT	SEGMENT
 Jmp$ = 48
@@ -15611,7 +15611,7 @@ $LL4@VmGetJumpD:
 ; 2153 :         return _BUF_SIZE <= _Myres;
 
   0002f	48 83 7f 38 10	 cmp	 QWORD PTR [rdi+56], 16
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 812  : 		if (Temp->Prev->IsLabel && Temp->Prev->Name == Jmp->Name)
 
@@ -15621,7 +15621,7 @@ $LL4@VmGetJumpD:
 ; 4091 :         return _Traits_equal<_Traits>(_Mypair._Myval2._Myptr(), _Mypair._Myval2._Mysize,
 
   00038	48 8b 42 10	 mov	 rax, QWORD PTR [rdx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 812  : 		if (Temp->Prev->IsLabel && Temp->Prev->Name == Jmp->Name)
 
@@ -15668,7 +15668,7 @@ $LN21@VmGetJumpD:
   0005d	85 c0		 test	 eax, eax
   0005f	74 11		 je	 SHORT $LN53@VmGetJumpD
 $LN27@VmGetJumpD:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 817  : 		Delta -= VmGetInstructionLength(Temp->Prev->InstructionId);
 
@@ -15721,7 +15721,7 @@ $LL7@VmGetJumpD:
 ; 2153 :         return _BUF_SIZE <= _Myres;
 
   000ae	48 83 7f 38 10	 cmp	 QWORD PTR [rdi+56], 16
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 824  : 		if (Temp->Next->IsLabel && Temp->Next->Name == Jmp->Name)
 
@@ -15731,7 +15731,7 @@ $LL7@VmGetJumpD:
 ; 4091 :         return _Traits_equal<_Traits>(_Mypair._Myval2._Myptr(), _Mypair._Myval2._Mysize,
 
   000b7	48 8b 42 10	 mov	 rax, QWORD PTR [rdx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 824  : 		if (Temp->Next->IsLabel && Temp->Next->Name == Jmp->Name)
 
@@ -15778,7 +15778,7 @@ $LN41@VmGetJumpD:
   000dc	85 c0		 test	 eax, eax
   000de	74 92		 je	 SHORT $LN53@VmGetJumpD
 $LN47@VmGetJumpD:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 829  : 		Delta += VmGetInstructionLength(Temp->Next->InstructionId);
 
@@ -15803,7 +15803,7 @@ $LN6@VmGetJumpD:
 ?VmGetJumpDelta@@YAHPEAU_CODE_LINK@@@Z ENDP		; VmGetJumpDelta
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetVmSize@@YAKPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 Assembler$ = 8
@@ -15842,7 +15842,7 @@ $LN10@VmGetVmSiz:
 ?VmGetVmSize@@YAKPEAU_VM_ASSEMBLER@@@Z ENDP		; VmGetVmSize
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetCodeSize@@YAKPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 Assembler$ = 8
@@ -16247,19 +16247,19 @@ $LN20@VmGetCodeS:
 ?VmGetCodeSize@@YAKPEAU_VM_ASSEMBLER@@@Z ENDP		; VmGetCodeSize
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
@@ -16272,15 +16272,15 @@ _TEXT	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\algorithm
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGenerateRandomOpCodes@@YAXPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 $T1 = 32
@@ -16334,7 +16334,7 @@ $LL4@VmGenerate:
 
   00055	49 8b 96 18 28
 	00 00		 mov	 rdx, QWORD PTR [r14+10264]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 781  : 			Assembler->UsedInstructions.push_back(&Assembler->Instructions[i]);
 
@@ -16370,7 +16370,7 @@ $LN10@VmGenerate:
   00079	48 8b cf	 mov	 rcx, rdi
   0007c	e8 00 00 00 00	 call	 ??$_Emplace_reallocate@PEAU_VM_INSTRUCTION@@@?$vector@PEAU_VM_INSTRUCTION@@V?$allocator@PEAU_VM_INSTRUCTION@@@std@@@std@@QEAAPEAPEAU_VM_INSTRUCTION@@QEAPEAU2@$$QEAPEAU2@@Z ; std::vector<_VM_INSTRUCTION *,std::allocator<_VM_INSTRUCTION *> >::_Emplace_reallocate<_VM_INSTRUCTION *>
 $LN2@VmGenerate:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 777  : 	for (INT i = 0; i < 256; i++)
 
@@ -16383,7 +16383,7 @@ $LN2@VmGenerate:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   0008f	4c 8b 47 08	 mov	 r8, QWORD PTR [rdi+8]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 763  : 	INT Increment = 256 / Assembler->UsedInstructions.size();
 
@@ -16395,7 +16395,7 @@ $LN2@VmGenerate:
   00095	4c 8b 0f	 mov	 r9, QWORD PTR [rdi]
   00098	49 8b c8	 mov	 rcx, r8
   0009b	49 2b c9	 sub	 rcx, r9
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 763  : 	INT Increment = 256 / Assembler->UsedInstructions.size();
 
@@ -16406,7 +16406,7 @@ $LN2@VmGenerate:
 
   000a3	48 c1 f9 03	 sar	 rcx, 3
   000a7	33 f6		 xor	 esi, esi
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 763  : 	INT Increment = 256 / Assembler->UsedInstructions.size();
 
@@ -16432,7 +16432,7 @@ $LL17@VmGenerate:
 
   000d0	4d 2b c1	 sub	 r8, r9
   000d3	49 c1 f8 03	 sar	 r8, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 766  : 		INT FoldBase = Assembler->UsedInstructions.size() * i;
 
@@ -16537,7 +16537,7 @@ $LL56@VmGenerate:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   00169	4c 8b 47 08	 mov	 r8, QWORD PTR [rdi+8]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16550,7 +16550,7 @@ $LL56@VmGenerate:
   00172	49 8b c0	 mov	 rax, r8
   00175	49 2b c1	 sub	 rax, r9
   00178	48 c1 f8 03	 sar	 rax, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16602,7 +16602,7 @@ $LN18@VmGenerate:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   001b7	4c 8b 47 08	 mov	 r8, QWORD PTR [rdi+8]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16614,7 +16614,7 @@ $LN18@VmGenerate:
   001bd	4c 8b 0f	 mov	 r9, QWORD PTR [rdi]
   001c0	49 8b c0	 mov	 rax, r8
   001c3	49 2b c1	 sub	 rax, r9
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16624,7 +16624,7 @@ $LN18@VmGenerate:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   001c9	48 c1 f8 03	 sar	 rax, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16664,15 +16664,15 @@ $LN16@VmGenerate:
 ?VmGenerateRandomOpCodes@@YAXPEAU_VM_ASSEMBLER@@@Z ENDP	; VmGenerateRandomOpCodes
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
@@ -16685,15 +16685,15 @@ _TEXT	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\algorithm
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmFoldTable@@YAXPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 $T1 = 32
@@ -16723,7 +16723,7 @@ $LN75:
 
   00024	4c 8b 89 18 28
 	00 00		 mov	 r9, QWORD PTR [rcx+10264]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 763  : 	INT Increment = 256 / Assembler->UsedInstructions.size();
 
@@ -16736,7 +16736,7 @@ $LN75:
 	00 00		 mov	 r10, QWORD PTR [rcx+10256]
   00034	4d 8b c1	 mov	 r8, r9
   00037	4d 2b c2	 sub	 r8, r10
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 763  : 	INT Increment = 256 / Assembler->UsedInstructions.size();
 
@@ -16746,7 +16746,7 @@ $LN75:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   0003f	49 c1 f8 03	 sar	 r8, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 762  : {
 
@@ -16781,7 +16781,7 @@ $LL4@VmFoldTabl:
 
   00080	4d 2b ca	 sub	 r9, r10
   00083	49 c1 f9 03	 sar	 r9, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 766  : 		INT FoldBase = Assembler->UsedInstructions.size() * i;
 
@@ -16888,7 +16888,7 @@ $LL43@VmFoldTabl:
 
   0011d	4c 8b 8f 18 28
 	00 00		 mov	 r9, QWORD PTR [rdi+10264]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16902,7 +16902,7 @@ $LL43@VmFoldTabl:
   0012d	49 8b c1	 mov	 rax, r9
   00130	49 2b c2	 sub	 rax, r10
   00133	48 c1 f8 03	 sar	 rax, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16953,7 +16953,7 @@ $LN5@VmFoldTabl:
 
   00167	4c 8b 8f 18 28
 	00 00		 mov	 r9, QWORD PTR [rdi+10264]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16966,7 +16966,7 @@ $LN5@VmFoldTabl:
 	00 00		 mov	 r10, QWORD PTR [rdi+10256]
   00177	49 8b c1	 mov	 rax, r9
   0017a	49 2b c2	 sub	 rax, r10
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -16976,7 +16976,7 @@ $LN5@VmFoldTabl:
 ; 1484 :         return static_cast<size_type>(_My_data._Mylast - _My_data._Myfirst);
 
   00180	48 c1 f8 03	 sar	 rax, 3
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 768  : 		for (INT j = 0; j < Assembler->UsedInstructions.size(); j++)
 
@@ -17015,7 +17015,7 @@ $LN3@VmFoldTabl:
 ?VmFoldTable@@YAXPEAU_VM_ASSEMBLER@@@Z ENDP		; VmFoldTable
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\random
@@ -17025,7 +17025,7 @@ _TEXT	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\algorithm
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xutility
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\algorithm
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmShuffleUsedHandlerOder@@YAXPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 _RngFunc$1 = 32
@@ -17142,7 +17142,7 @@ $LL31@VmShuffleU:
 ; 2857 :     _Random_shuffle1(_First, _Last, _RngFunc);
 
   000a8	e8 00 00 00 00	 call	 ??$_Random_shuffle1@V?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PEAU_VM_INSTRUCTION@@@std@@@std@@@std@@V?$_Rng_from_urng@_JV?$mersenne_twister_engine@I$0CA@$0CHA@$0BIN@$0BP@$0JJAILANP@$0L@$0PPPPPPPP@$06$0JNCMFGIA@$0P@$0OPMGAAAA@$0BC@$0GMAHIJGF@@std@@@2@@std@@YAXV?$_Vector_iterator@V?$_Vector_val@U?$_Simple_types@PEAU_VM_INSTRUCTION@@@std@@@std@@@0@0AEAV?$_Rng_from_urng@_JV?$mersenne_twister_engine@I$0CA@$0CHA@$0BIN@$0BP@$0JJAILANP@$0L@$0PPPPPPPP@$06$0JNCMFGIA@$0P@$0OPMGAAAA@$0BC@$0GMAHIJGF@@std@@@0@@Z ; std::_Random_shuffle1<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_VM_INSTRUCTION *> > >,std::_Rng_from_urng<__int64,std::mersenne_twister_engine<unsigned int,32,624,397,31,2567483615,11,4294967295,7,2636928640,15,4022730752,18,1812433253> > >
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 760  : }
 
@@ -17157,7 +17157,7 @@ $LL31@VmShuffleU:
 ?VmShuffleUsedHandlerOder@@YAXPEAU_VM_ASSEMBLER@@@Z ENDP ; VmShuffleUsedHandlerOder
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmAppendJumpsToUsed@@YAXPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 Assembler$ = 48
@@ -17255,47 +17255,47 @@ $LN13@VmAppendJu:
 ?VmAppendJumpsToUsed@@YAXPEAU_VM_ASSEMBLER@@@Z ENDP	; VmAppendJumpsToUsed
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\fstream
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xiosbase
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\algorithm
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
@@ -17303,7 +17303,7 @@ _TEXT	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\string
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\fstream
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
@@ -17320,11 +17320,11 @@ _TEXT	ENDS
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\fstream
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\fstream
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmLoadFile@@YAHPEAU_VM_ASSEMBLER@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
 _TEXT	SEGMENT
 $T1 = 48
@@ -17407,7 +17407,7 @@ $LN41@VmLoadFile:
   000a5	8d 91 50 ff ff
 	ff		 lea	 edx, DWORD PTR [rcx-176]
   000ab	89 54 0c 4c	 mov	 DWORD PTR InputFile$[rsp+rcx-4], edx
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 697  : 	if (InputFile.fail())
 
@@ -17418,7 +17418,7 @@ $LN41@VmLoadFile:
 ; 303  :         return rdstate() & (ios_base::badbit | ios_base::failbit);
 
   000b8	f6 44 0c 60 06	 test	 BYTE PTR InputFile$[rsp+rcx+16], 6
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 697  : 	if (InputFile.fail())
 
@@ -17449,7 +17449,7 @@ $LN17@VmLoadFile:
 ; 4296 :         _Traits::assign(_Mypair._Myval2._Bx._Buf[0], _Elem());
 
   000e3	40 88 70 20	 mov	 BYTE PTR [rax+32], sil
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 700  : 	Assembler->CodeStart = new CODE_LINK;
 
@@ -17482,7 +17482,7 @@ $LN26@VmLoadFile:
   0010e	48 8d 15 00 00
 	00 00		 lea	 rdx, OFFSET FLAT:??_C@_0BO@EBMDFMC@THIS?5IS?5THE?5START?5XDDDDDD?$CB?$CB?$CB?$CB@
   00115	e8 00 00 00 00	 call	 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@QEBD_K@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 704  : 	Assembler->CodeStart->Prev = Assembler->CodeStart->Next = NULL;
 
@@ -17506,7 +17506,7 @@ $LN26@VmLoadFile:
 
   00133	c6 45 60 00	 mov	 BYTE PTR Line$2[rbp-256], 0
 $LN451@VmLoadFile:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 708  : 		if (Line.length() < 1)
 
@@ -17550,7 +17550,7 @@ $LL10@VmLoadFile:
 
   00198	48 83 fa 10	 cmp	 rdx, 16
   0019c	49 0f 43 c0	 cmovae	 rax, r8
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 712  : 		for (i = 0; i < Line.length(); i++) if (Line[i] == ';') break; //REMOVE COMMENTS
 
@@ -17589,7 +17589,7 @@ $LL11@VmLoadFile:
 
   001cf	48 89 4d 70	 mov	 QWORD PTR Line$2[rbp-240], rcx
   001d3	c6 04 08 00	 mov	 BYTE PTR [rax+rcx], 0
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 713  : 		while (Line.length() > i) Line.pop_back();
 
@@ -17616,7 +17616,7 @@ $LL13@VmLoadFile:
 
   001f5	48 83 fa 10	 cmp	 rdx, 16
   001f9	49 0f 43 c0	 cmovae	 rax, r8
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 714  : 		while (!Line.empty() && (Line[Line.length() - 1] == (CHAR)9 || Line[Line.length() - 1] == ' ')) Line.pop_back(); //remove whitespace
 
@@ -17632,7 +17632,7 @@ $LL13@VmLoadFile:
 
   00208	48 83 fa 10	 cmp	 rdx, 16
   0020c	49 0f 43 c0	 cmovae	 rax, r8
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 714  : 		while (!Line.empty() && (Line[Line.length() - 1] == (CHAR)9 || Line[Line.length() - 1] == ' ')) Line.pop_back(); //remove whitespace
 
@@ -17658,7 +17658,7 @@ $LN20@VmLoadFile:
 
   00226	48 89 4d 70	 mov	 QWORD PTR Line$2[rbp-240], rcx
   0022a	c6 04 08 00	 mov	 BYTE PTR [rax+rcx], 0
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 714  : 		while (!Line.empty() && (Line[Line.length() - 1] == (CHAR)9 || Line[Line.length() - 1] == ' ')) Line.pop_back(); //remove whitespace
 
@@ -17688,7 +17688,7 @@ $LL15@VmLoadFile:
 
   00254	48 83 fa 10	 cmp	 rdx, 16
   00258	49 0f 43 c0	 cmovae	 rax, r8
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 715  : 		while (!Line.empty() && !std::isalpha(Line[0])) Line.erase(Line.begin());
 
@@ -17768,7 +17768,7 @@ $LL15@VmLoadFile:
 
   002c7	e8 00 00 00 00	 call	 memmove
   002cc	90		 npad	 1
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 715  : 		while (!Line.empty() && !std::isalpha(Line[0])) Line.erase(Line.begin());
 
@@ -17874,7 +17874,7 @@ $LN231@VmLoadFile:
   00369	48 8d 4c 24 30	 lea	 rcx, QWORD PTR $T1[rsp]
   0036e	e8 00 00 00 00	 call	 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@QEBD_K@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
   00373	90		 npad	 1
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 722  : 		VECTOR<STRING> Tokens = VmTokenizeLine(Line, " ");
 
@@ -17944,7 +17944,7 @@ $LN262@VmLoadFile:
 	00 00		 mov	 rbx, QWORD PTR Tokens$3[rbp-256]
   003d8	48 2b c3	 sub	 rax, rbx
   003db	48 c1 f8 05	 sar	 rax, 5
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 724  : 		if (Tokens.size() < 1)
 
@@ -18062,7 +18062,7 @@ $LN308@VmLoadFile:
   00449	48 83 c3 20	 add	 rbx, 32			; 00000020H
   0044d	48 3b df	 cmp	 rbx, rdi
   00450	75 ae		 jne	 SHORT $LL289@VmLoadFile
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 725  : 			continue;
 
@@ -18223,7 +18223,7 @@ $LN457@VmLoadFile:
 $LN511@VmLoadFile:
   0051c	48 8b cb	 mov	 rcx, rbx
   0051f	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 706  : 	for (STRING Line; std::getline(InputFile, Line); )
 
@@ -18562,7 +18562,7 @@ $LN527@VmLoadFile:
   006ce	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QEAAXH_N@Z
 $LN543@VmLoadFile:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 735  : 	return TRUE;
 
@@ -18588,7 +18588,7 @@ $LN32@VmLoadFile:
   00711	48 8d 4d 00	 lea	 rcx, QWORD PTR InputFile$[rbp-80]
   00715	ff 15 00 00 00
 	00		 call	 QWORD PTR __imp_??1?$basic_ios@DU?$char_traits@D@std@@@std@@UEAA@XZ
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 735  : 	return TRUE;
 
@@ -18746,41 +18746,41 @@ Filepath$ = 472
 ?dtor$3@?0??VmLoadFile@@YAHPEAU_VM_ASSEMBLER@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z@4HA ENDP ; `VmLoadFile'::`1'::dtor$3
 text$x	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
-; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmAddInstruction@@YAHPEAU_VM_ASSEMBLER@@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z
 _TEXT	SEGMENT
 Assembler$ = 80
@@ -18821,7 +18821,7 @@ $LN165:
 ; 4296 :         _Traits::assign(_Mypair._Myval2._Bx._Buf[0], _Elem());
 
   00033	c6 40 20 00	 mov	 BYTE PTR [rax+32], 0
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 578  : 	PCODE_LINK Link = new CODE_LINK;
 
@@ -18838,7 +18838,7 @@ $LN17@VmAddInstr:
   00042	48 89 6c 24 50	 mov	 QWORD PTR [rsp+80], rbp
   00047	48 2b c6	 sub	 rax, rsi
   0004a	48 89 7c 24 58	 mov	 QWORD PTR [rsp+88], rdi
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 579  : 	if (Tokens.size() == 1 && Tokens[0][Tokens[0].length() - 1] == ':')
 
@@ -18856,7 +18856,7 @@ $LN17@VmAddInstr:
 ; 2144 :         const value_type* _Result = _Bx._Buf;
 
   00068	48 8b ce	 mov	 rcx, rsi
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 579  : 	if (Tokens.size() == 1 && Tokens[0][Tokens[0].length() - 1] == ':')
 
@@ -18871,7 +18871,7 @@ $LN17@VmAddInstr:
 
   00071	48 8b 0e	 mov	 rcx, QWORD PTR [rsi]
 $LN158@VmAddInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 579  : 	if (Tokens.size() == 1 && Tokens[0][Tokens[0].length() - 1] == ':')
 
@@ -18944,7 +18944,7 @@ $LN64@VmAddInstr:
 
   000b6	48 89 01	 mov	 QWORD PTR [rcx], rax
   000b9	c6 04 07 00	 mov	 BYTE PTR [rdi+rax], 0
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 584  : 	}
 
@@ -18961,7 +18961,7 @@ $LN157@VmAddInstr:
   000c6	4c 8d 2d 00 00
 	00 00		 lea	 r13, OFFSET FLAT:__ImageBase
   000cd	48 8b 6e 10	 mov	 rbp, QWORD PTR [rsi+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 21   : 	for (INT i = 0; i < ARRAYSIZE(InstructionBindings); i++)
 
@@ -19017,7 +19017,7 @@ $LN83@VmAddInstr:
   00107	85 c0		 test	 eax, eax
   00109	74 3d		 je	 SHORT $LN140@VmAddInstr
 $LN89@VmAddInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 21   : 	for (INT i = 0; i < ARRAYSIZE(InstructionBindings); i++)
 
@@ -19091,7 +19091,7 @@ $LN7@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   0018a	49 8b 0e	 mov	 rcx, QWORD PTR [r14]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 607  : 			Link->Data = (PVOID)(CHAR)std::stoi(Tokens[1]);
 
@@ -19101,7 +19101,7 @@ $LN7@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   0018f	48 83 c1 20	 add	 rcx, 32			; 00000020H
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 607  : 			Link->Data = (PVOID)(CHAR)std::stoi(Tokens[1]);
 
@@ -19119,7 +19119,7 @@ $LN8@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   001a9	49 8b 0e	 mov	 rcx, QWORD PTR [r14]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 625  : 			Link->Data = (PVOID)(SHORT)std::stoi(Tokens[1]);
 
@@ -19129,7 +19129,7 @@ $LN8@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   001ae	48 83 c1 20	 add	 rcx, 32			; 00000020H
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 625  : 			Link->Data = (PVOID)(SHORT)std::stoi(Tokens[1]);
 
@@ -19159,7 +19159,7 @@ $LN11@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   001e3	49 8b 36	 mov	 rsi, QWORD PTR [r14]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 33   : 	for (INT i = 0; i < ARRAYSIZE(RegisterBindings); i++)
 
@@ -19174,7 +19174,7 @@ $LN11@VmAddInstr:
 
   001ec	48 8b 6e 30	 mov	 rbp, QWORD PTR [rsi+48]
 $LL106@VmAddInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 35   : 		if (Register == RegisterBindings[i])
 
@@ -19224,7 +19224,7 @@ $LN116@VmAddInstr:
   00226	85 c0		 test	 eax, eax
   00228	74 0c		 je	 SHORT $LN141@VmAddInstr
 $LN122@VmAddInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 33   : 	for (INT i = 0; i < ARRAYSIZE(RegisterBindings); i++)
 
@@ -19248,7 +19248,7 @@ $LN13@VmAddInstr:
 ; 1514 :         return _My_data._Myfirst[_Pos];
 
   0023c	49 8b 16	 mov	 rdx, QWORD PTR [r14]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 677  : 			Link->Name = Tokens[1];
 
@@ -19286,7 +19286,7 @@ $LN134@VmAddInstr:
 
   0025a	e8 00 00 00 00	 call	 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@QEBD_K@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
 $LN129@VmAddInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 685  : 	Link->Prev = Assembler->CodeEnd;
 
@@ -19459,7 +19459,7 @@ $LN160@VmAddInstr:
 ?VmAddInstruction@@YAHPEAU_VM_ASSEMBLER@@AEBV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@@Z ENDP ; VmAddInstruction
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmAddOpaqueBranch@@YAHPEAU_VM_ASSEMBLER@@PEAU_CODE_LINK@@HH@Z
 _TEXT	SEGMENT
 Assembler$ = 8
@@ -19481,7 +19481,7 @@ JunkCount$ = 32
 ?VmAddOpaqueBranch@@YAHPEAU_VM_ASSEMBLER@@PEAU_CODE_LINK@@HH@Z ENDP ; VmAddOpaqueBranch
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetInverseStackChangeForRange@@YAHPEAU_VM_ASSEMBLER@@PEAU_CODE_LINK@@H@Z
 _TEXT	SEGMENT
 Assembler$ = 8
@@ -19899,7 +19899,7 @@ $LN28@VmGetInver:
 ?VmGetInverseStackChangeForRange@@YAHPEAU_VM_ASSEMBLER@@PEAU_CODE_LINK@@H@Z ENDP ; VmGetInverseStackChangeForRange
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetInverseStackChange@@YAHPEAU_CODE_LINK@@@Z
 _TEXT	SEGMENT
 Link$ = 8
@@ -20317,7 +20317,7 @@ $LN18@VmGetInver:
 ?VmGetInverseStackChange@@YAHPEAU_CODE_LINK@@@Z ENDP	; VmGetInverseStackChange
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmLoadDefaultInstructions@@YAXPEAU_VM_ASSEMBLER@@@Z
 _TEXT	SEGMENT
 HandlerTable$ = 32
@@ -21449,7 +21449,7 @@ $LN2@VmLoadDefa:
 ?VmLoadDefaultInstructions@@YAXPEAU_VM_ASSEMBLER@@@Z ENDP ; VmLoadDefaultInstructions
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetInstructionLength@@YAHE@Z
 _TEXT	SEGMENT
 InstructionId$ = 8
@@ -21835,11 +21835,11 @@ $LN10@VmGetInstr:
 ?VmGetInstructionLength@@YAHE@Z ENDP			; VmGetInstructionLength
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetRegisterId@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z
 _TEXT	SEGMENT
 Register$ = 64
@@ -21867,7 +21867,7 @@ $LN35:
   0001c	4c 8d 3d 00 00
 	00 00		 lea	 r15, OFFSET FLAT:?RegisterBindings@@3PAPEBDA ; RegisterBindings
   00023	48 8b 71 10	 mov	 rsi, QWORD PTR [rcx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 32   : {
 
@@ -21929,7 +21929,7 @@ $LN14@VmGetRegis:
   00062	85 c0		 test	 eax, eax
   00064	74 22		 je	 SHORT $LN25@VmGetRegis
 $LN20@VmGetRegis:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 33   : 	for (INT i = 0; i < ARRAYSIZE(RegisterBindings); i++)
 
@@ -21968,11 +21968,11 @@ $LN25@VmGetRegis:
 ?VmGetRegisterId@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z ENDP ; VmGetRegisterId
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmGetInstructionId@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z
 _TEXT	SEGMENT
 Instruction$ = 64
@@ -22000,7 +22000,7 @@ $LN35:
   0001c	4c 8d 3d 00 00
 	00 00		 lea	 r15, OFFSET FLAT:?InstructionBindings@@3PAPEBDA ; InstructionBindings
   00023	48 8b 71 10	 mov	 rsi, QWORD PTR [rcx+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 20   : {
 
@@ -22062,7 +22062,7 @@ $LN14@VmGetInstr:
   00062	85 c0		 test	 eax, eax
   00064	74 25		 je	 SHORT $LN25@VmGetInstr
 $LN20@VmGetInstr:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 21   : 	for (INT i = 0; i < ARRAYSIZE(InstructionBindings); i++)
 
@@ -22102,26 +22102,26 @@ $LN25@VmGetInstr:
 ?VmGetInstructionId@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z ENDP ; VmGetInstructionId
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 ;	COMDAT ?VmTokenizeLine@@YA?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@0@Z
 _TEXT	SEGMENT
 $T1 = 32
@@ -22167,7 +22167,7 @@ $LN134:
   00045	49 89 0f	 mov	 QWORD PTR [r15], rcx
   00048	49 89 4f 08	 mov	 QWORD PTR [r15+8], rcx
   0004c	49 89 4f 10	 mov	 QWORD PTR [r15+16], rcx
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 17   : 	return Values;
 
@@ -22325,7 +22325,7 @@ $LN117@VmTokenize:
   000f1	49 2b dd	 sub	 rbx, r13
   000f4	49 8b 46 10	 mov	 rax, QWORD PTR [r14+16]
 $LN34@VmTokenize:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 10   : 		if (CurPos == std::string::npos)
 
@@ -22360,7 +22360,7 @@ $LN129@VmTokenize:
   0011c	48 3b c6	 cmp	 rax, rsi
   0011f	0f 82 f6 00 00
 	00		 jb	 $LN118@VmTokenize
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 12   : 		std::string token = Str.substr(PrevPos, CurPos - PrevPos);
 
@@ -22397,7 +22397,7 @@ $LN127@VmTokenize:
 ; 4087 :         return basic_string(*this, _Off, _Count, get_allocator());
 
   00150	83 4c 24 20 02	 or	 DWORD PTR $T1[rsp], 2
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 13   : 		if (!token.empty())
 
@@ -22439,7 +22439,7 @@ $LN81@VmTokenize:
   00188	49 8b cf	 mov	 rcx, r15
   0018b	e8 00 00 00 00	 call	 ??$_Emplace_reallocate@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@QEAAPEAV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@QEAV21@AEBV21@@Z ; std::vector<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > > >::_Emplace_reallocate<std::basic_string<char,std::char_traits<char>,std::allocator<char> > const &>
 $LN80@VmTokenize:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 15   : 		PrevPos = CurPos + Div.length();
 
@@ -22499,7 +22499,7 @@ $LN109@VmTokenize:
   001d0	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
   001d5	4c 8b 44 24 30	 mov	 r8, QWORD PTR Div$GSCopy$1$[rsp]
 $LN99@VmTokenize:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmAssembler.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmAssembler.cpp
 
 ; 16   : 	} while (CurPos < Str.length() && PrevPos < Str.length());
 

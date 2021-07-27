@@ -56,7 +56,7 @@ PUBLIC	??_C@_0L@MIPPAPCL@Finished?4?6@			; `string'
 PUBLIC	??_C@_0DL@CFOHLOED@C?3?2Users?2Iizerd?2source?2repos?2St@ ; `string'
 PUBLIC	??_C@_0BC@KOBOFFFF@Stack?5change?5is?5?3@	; `string'
 PUBLIC	??_C@_0P@ICEAJHEC@?6?5VmEnter?5is?3?6@		; `string'
-PUBLIC	??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@ ; `string'
+PUBLIC	??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@ ; `string'
 PUBLIC	??_C@_05PDJBBECF@pause@				; `string'
 PUBLIC	??_R4exception@std@@6B@				; std::exception::`RTTI Complete Object Locator'
 PUBLIC	??_R3exception@std@@8				; std::exception::`RTTI Class Hierarchy Descriptor'
@@ -562,10 +562,10 @@ rdata$r	ENDS
 CONST	SEGMENT
 ??_C@_05PDJBBECF@pause@ DB 'pause', 00H			; `string'
 CONST	ENDS
-;	COMDAT ??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@
+;	COMDAT ??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@
 CONST	SEGMENT
-??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@ DB 'C:\Users\Iiz'
-	DB	'erd\source\repos\StackMachine\x64\Release\Test.exe', 00H ; `string'
+??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@ DB 'C:\$Fanta\Vi'
+	DB	'rtualMachine\x64\Release\Test.exe', 00H	; `string'
 CONST	ENDS
 ;	COMDAT ??_C@_0P@ICEAJHEC@?6?5VmEnter?5is?3?6@
 CONST	SEGMENT
@@ -1701,21 +1701,21 @@ $LN2@Sentry_bas:
 ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ENDP ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
 _TEXT	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xmemory
 ; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\vector
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 ;	COMDAT main
 _TEXT	SEGMENT
 Name$ = 48
@@ -1793,7 +1793,7 @@ $LN97:
   0009a	48 8d 4c 24 38	 lea	 rcx, QWORD PTR $T1[rsp]
   0009f	e8 00 00 00 00	 call	 ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAAAEAV12@QEBD_K@Z ; std::basic_string<char,std::char_traits<char>,std::allocator<char> >::assign
   000a4	90		 npad	 1
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 
 ; 14   : 	VmLoadFile(&Asm, "C:\\Users\\Iizerd\\source\\repos\\StackMachine\\Code\\Example.txt");
 
@@ -1866,7 +1866,7 @@ $LN51@main:
 
   000f0	e8 00 00 00 00	 call	 ??3@YAXPEAX_K@Z		; operator delete
 $LN41@main:
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 
 ; 26   : 	VmHeader.Magic = 'kctS';
 
@@ -1990,7 +1990,7 @@ $LN41@main:
 
   001fd	48 8b 4c 24 78	 mov	 rcx, QWORD PTR Asm$[rsp+24]
   00202	48 3b 4c 24 70	 cmp	 rcx, QWORD PTR Asm$[rsp+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 
 ; 46   : 	for (INT i = 0; i < Asm.Instructions[0].OpCodes.size(); i++)
 
@@ -2029,7 +2029,7 @@ $LL4@main:
 
   0024b	48 8b 4c 24 78	 mov	 rcx, QWORD PTR Asm$[rsp+24]
   00250	48 2b 4c 24 70	 sub	 rcx, QWORD PTR Asm$[rsp+16]
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 
 ; 46   : 	for (INT i = 0; i < Asm.Instructions[0].OpCodes.size(); i++)
 
@@ -2117,7 +2117,7 @@ $LL93@main:
   0031e	c7 44 24 30 2e
 	76 6d 64	 mov	 DWORD PTR Name$[rsp], 1684895278 ; 646d762eH
 
-; 59   : 	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, sizeof(VM_HEADER) + SymbolTableSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_WRITE, meme);
+; 59   : 	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, sizeof(VM_HEADER) + SymbolTableSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_WRITE, meme);
 
   00326	44 8b 44 24 58	 mov	 r8d, DWORD PTR SymbolTableSize$[rsp]
   0032b	41 81 c0 0d 04
@@ -2127,7 +2127,7 @@ $LL93@main:
 	c0		 mov	 r9d, -1073741824	; c0000000H
   0033d	48 8b 54 24 30	 mov	 rdx, QWORD PTR Name$[rsp]
   00342	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@
   00349	e8 00 00 00 00	 call	 ?AddSection@@YAHPEBD_KKKPEAX@Z ; AddSection
 
 ; 60   : 	CONST CHAR* VMC = ".vmc";
@@ -2136,7 +2136,7 @@ $LL93@main:
   0034e	c7 44 24 30 2e
 	76 6d 63	 mov	 DWORD PTR Name$[rsp], 1668118062 ; 636d762eH
 
-; 62   : 	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, CodeSize, IMAGE_SCN_MEM_READ, CodeBlock);
+; 62   : 	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, CodeSize, IMAGE_SCN_MEM_READ, CodeBlock);
 
   00356	4c 89 74 24 20	 mov	 QWORD PTR [rsp+32], r14
   0035b	41 b9 00 00 00
@@ -2145,7 +2145,7 @@ $LL93@main:
 	00 00		 mov	 r8d, DWORD PTR CodeSize$[rbp-256]
   00368	48 8b 54 24 30	 mov	 rdx, QWORD PTR Name$[rsp]
   0036d	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@
   00374	e8 00 00 00 00	 call	 ?AddSection@@YAHPEBD_KKKPEAX@Z ; AddSection
 
 ; 63   : 	CONST CHAR* VMH = ".vmh";
@@ -2154,7 +2154,7 @@ $LL93@main:
   00379	c7 44 24 30 2e
 	76 6d 68	 mov	 DWORD PTR Name$[rsp], 1752004142 ; 686d762eH
 
-; 65   : 	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, VmSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_EXECUTE, VmBlock);
+; 65   : 	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, VmSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_EXECUTE, VmBlock);
 
   00381	48 89 74 24 20	 mov	 QWORD PTR [rsp+32], rsi
   00386	41 b9 00 00 00
@@ -2163,7 +2163,7 @@ $LL93@main:
 	00 00		 mov	 r8d, DWORD PTR VmSize$[rbp-256]
   00393	48 8b 54 24 30	 mov	 rdx, QWORD PTR Name$[rsp]
   00398	48 8d 0d 00 00
-	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0DP@CGIPCNO@C?3?2Users?2Iizerd?2source?2repos?2St@
+	00 00		 lea	 rcx, OFFSET FLAT:??_C@_0CO@PHIBJIAF@C?3?2$Fanta?2VirtualMachine?2x64?2Re@
   0039f	e8 00 00 00 00	 call	 ?AddSection@@YAHPEBD_KKKPEAX@Z ; AddSection
 
 ; 66   : 
@@ -2262,7 +2262,7 @@ $LN67@main:
   00421	48 8d 4c 24 70	 lea	 rcx, QWORD PTR Asm$[rsp+16]
   00426	e8 00 00 00 00	 call	 ??_M@YAXPEAX_K1P6AX0@Z@Z
   0042b	90		 npad	 1
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\main.cpp
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\main.cpp
 
 ; 68   : 	return 1;
 
@@ -3361,7 +3361,7 @@ __catch$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D
 ?catch$4@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::catch$4
 text$x	ENDS
 ; Function compile flags: /Ogtpy
-; File C:\Users\Iizerd\source\repos\StackMachine\DynamicGenerator\VmSectionAppender.h
+; File C:\$Fanta\VirtualMachine\DynamicGenerator\VmSectionAppender.h
 ;	COMDAT ?AddSection@@YAHPEBD_KKKPEAX@Z
 _TEXT	SEGMENT
 DataToCopyIn$GSCopy$1$ = 64

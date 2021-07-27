@@ -15234,7 +15234,7 @@ $LN3:
 ??$?GUsteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@12@V312@@chrono@std@@YA?AV?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@01@AEBV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@01@0@Z ENDP ; std::chrono::operator-<std::chrono::steady_clock,std::chrono::duration<__int64,std::ratio<1,1000000000> >,std::chrono::duration<__int64,std::ratio<1,1000000000> > >
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp
+; File C:\$Fanta\VirtualMachine\StackMachine\main.cpp
 ;	COMDAT main
 _TEXT	SEGMENT
 XorKey$1 = 32
@@ -16137,7 +16137,7 @@ main$dtor$3 PROC
 main$dtor$3 ENDP
 text$x	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp
+; File C:\$Fanta\VirtualMachine\StackMachine\main.cpp
 ;	COMDAT ?TestFunc@@YA_J_J00000@Z
 _TEXT	SEGMENT
 v1$ = 48
@@ -16183,7 +16183,7 @@ $LN3:
 ?TestFunc@@YA_J_J00000@Z ENDP				; TestFunc
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\main.cpp
+; File C:\$Fanta\VirtualMachine\StackMachine\main.cpp
 ;	COMDAT ?CXorStr@@YAXPEAXDK@Z
 _TEXT	SEGMENT
 i$1 = 0
@@ -16402,7 +16402,7 @@ $LN3:
 ?now@steady_clock@chrono@std@@SA?AV?$time_point@Usteady_clock@chrono@std@@V?$duration@_JU?$ratio@$00$0DLJKMKAA@@std@@@23@@23@XZ ENDP ; std::chrono::steady_clock::now
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmDecodeInstruction@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAXPEAH@Z
 _TEXT	SEGMENT
 i$1 = 32
@@ -17610,7 +17610,7 @@ ReturnedSize$ = 416
 ?dtor$6@?0??SmDecodeInstruction@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAXPEAH@Z@4HA ENDP ; `SmDecodeInstruction'::`1'::dtor$6
 text$x	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmAssembleToFile@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
 _TEXT	SEGMENT
 File$ = 8
@@ -17690,7 +17690,7 @@ $LN3:
 ??$?6DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@@Z ENDP ; std::operator<<<char,std::char_traits<char>,std::allocator<char> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmAssembleToBlock@@YAXPEAU_SMCB@@@Z
 _TEXT	SEGMENT
 Instruction$1 = 32
@@ -18409,7 +18409,7 @@ $LN22@SmAssemble:
 ?SmAssembleToBlock@@YAXPEAU_SMCB@@@Z ENDP		; SmAssembleToBlock
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmParseLoadedFile@@YAXXZ
 _TEXT	SEGMENT
 i$1 = 32
@@ -22766,7 +22766,7 @@ $initVBases$ = 112
 ?dtor$2@?0???0?$basic_ifstream@DU?$char_traits@D@std@@@std@@QEAA@PEBDHH@Z@4HA ENDP ; `std::basic_ifstream<char,std::char_traits<char> >::basic_ifstream<char,std::char_traits<char> >'::`1'::dtor$2
 text$x	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmLoadFromFile@@YAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
 _TEXT	SEGMENT
 i$1 = 48
@@ -26042,7 +26042,7 @@ $initVBases$ = 72
 ?dtor$1@?0???0?$basic_stringstream@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QEAA@XZ@4HA ENDP ; `std::basic_stringstream<char,std::char_traits<char>,std::allocator<char> >::basic_stringstream<char,std::char_traits<char>,std::allocator<char> >'::`1'::dtor$1
 text$x	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmPrintByteAsHex@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@E@Z
 _TEXT	SEGMENT
 $T1 = 32
@@ -26194,7 +26194,7 @@ Byte$ = 392
 ?dtor$0@?0??SmPrintByteAsHex@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@E@Z@4HA ENDP ; `SmPrintByteAsHex'::`1'::dtor$0
 text$x	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmGetRegisterId@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z
 _TEXT	SEGMENT
 i$1 = 32
@@ -26293,7 +26293,7 @@ $LN3:
 ??$?8DU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@QEBD@Z ENDP ; std::operator==<char,std::char_traits<char>,std::allocator<char> >
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmGetOpCode@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z
 _TEXT	SEGMENT
 i$1 = 32
@@ -26367,7 +26367,7 @@ $LN1@SmGetOpCod:
 ?SmGetOpCode@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@PEAE@Z ENDP ; SmGetOpCode
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmGetInstructionSize@@YAHE@Z
 _TEXT	SEGMENT
 tv65 = 0
@@ -26763,7 +26763,7 @@ text$yd	SEGMENT
 ??__FInstructions@@YAXXZ ENDP				; `dynamic atexit destructor for 'Instructions''
 text$yd	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ??__EInstructions@@YAXXZ
 text$di	SEGMENT
 ??__EInstructions@@YAXXZ PROC				; `dynamic initializer for 'Instructions'', COMDAT
@@ -26798,7 +26798,7 @@ text$yd	SEGMENT
 ??__FLabels@@YAXXZ ENDP					; `dynamic atexit destructor for 'Labels''
 text$yd	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ??__ELabels@@YAXXZ
 text$di	SEGMENT
 ??__ELabels@@YAXXZ PROC					; `dynamic initializer for 'Labels'', COMDAT
@@ -27857,7 +27857,7 @@ text$yd	SEGMENT
 ??__FSymbols@@YAXXZ ENDP				; `dynamic atexit destructor for 'Symbols''
 text$yd	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ??__ESymbols@@YAXXZ
 text$di	SEGMENT
 ??__ESymbols@@YAXXZ PROC				; `dynamic initializer for 'Symbols'', COMDAT
@@ -28916,7 +28916,7 @@ this$ = 8
 ??0?$allocator@U_SYMBOL@@@std@@QEAA@XZ ENDP		; std::allocator<_SYMBOL>::allocator<_SYMBOL>
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmPushBackBlock@@YAXPEAU_SMCB@@PEAXK@Z
 _TEXT	SEGMENT
 Block$ = 24
@@ -28958,7 +28958,7 @@ $LN3:
 ?SmPushBackBlock@@YAXPEAU_SMCB@@PEAXK@Z ENDP		; SmPushBackBlock
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SmAllocCodeBlock@@YAXPEAU_SMCB@@K@Z
 _TEXT	SEGMENT
 Block$ = 48
@@ -29491,7 +29491,7 @@ $LN3:
 ??1_SYMBOL@@QEAA@XZ ENDP				; _SYMBOL::~_SYMBOL
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ??0_SYMBOL@@QEAA@HAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z
 _TEXT	SEGMENT
 tv71 = 48
@@ -31119,7 +31119,7 @@ this$ = 8
 ??0?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@QEAA@XZ ENDP ; std::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >::allocator<std::basic_string<char,std::char_traits<char>,std::allocator<char> > >
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachineAssembler.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachineAssembler.h
 ;	COMDAT ?SplitString@@YA?AV?$vector@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$allocator@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@2@@std@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@0@Z
 _TEXT	SEGMENT
 CurPos$ = 32
@@ -32306,7 +32306,7 @@ $LN6@stoi:
 ?stoi@std@@YAHAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@1@PEA_KH@Z ENDP ; std::stoi
 _TEXT	ENDS
 ; Function compile flags: /Odtp
-; File C:\Users\Iizerd\source\repos\StackMachine\StackMachine\StackMachine.h
+; File C:\$Fanta\VirtualMachine\StackMachine\StackMachine.h
 ;	COMDAT ?InitHandlerTable@@YAXPEAU_VM_HANDLER_TABLE@@@Z
 _TEXT	SEGMENT
 Table$ = 8

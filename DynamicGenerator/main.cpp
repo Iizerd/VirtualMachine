@@ -56,13 +56,13 @@ INT main()
 	ULONG64 Name = 0;
 	CONST CHAR* VMD = ".vmd";
 	memcpy(&Name, VMD, 4);
-	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, sizeof(VM_HEADER) + SymbolTableSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_WRITE, meme);
+	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, sizeof(VM_HEADER) + SymbolTableSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_WRITE, meme);
 	CONST CHAR* VMC = ".vmc";
 	memcpy(&Name, VMC, 4);
-	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, CodeSize, IMAGE_SCN_MEM_READ, CodeBlock);
+	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, CodeSize, IMAGE_SCN_MEM_READ, CodeBlock);
 	CONST CHAR* VMH = ".vmh";
 	memcpy(&Name, VMH, 4);
-	AddSection("C:\\Users\\Iizerd\\source\\repos\\StackMachine\\x64\\Release\\Test.exe", Name, VmSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_EXECUTE, VmBlock);
+	AddSection("C:\\$Fanta\\VirtualMachine\\x64\\Release\\Test.exe", Name, VmSize, IMAGE_SCN_MEM_READ | IMAGE_SCN_MEM_EXECUTE, VmBlock);
 
 	system("pause");
 	return 1;

@@ -7,6 +7,7 @@ VmEnter proc
 	jmp qword ptr[r8+rax*8h]	;jmp to first instruction handler
 VmEnter endp
 
+
 ViVmExit proc
 	mov r12,[r9+0h]
 	ret

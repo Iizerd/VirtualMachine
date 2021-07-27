@@ -1,4 +1,4 @@
-Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/25/21 19:10:37
+Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/26/21 14:58:20
 StackMachine.asm					     Page 1 - 1
 
 
@@ -1418,7 +1418,7 @@ StackMachine.asm					     Page 1 - 1
  00000D65			ViStbpq endp
 
 				end
-Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/25/21 19:10:37
+Microsoft (R) Macro Assembler (x64) Version 14.27.29111.0   07/26/21 14:58:20
 StackMachine.asm					     Symbols 2 - 1
 
 
